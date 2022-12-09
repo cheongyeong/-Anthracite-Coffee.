@@ -1,0 +1,292 @@
+.login_main {
+  width: 100%;
+
+}
+
+.mySwiper5 {
+  transition: 2s ease-in-out;
+}
+
+.login_Title {
+  /* text-align: center; */
+  font-size: 24px;
+  color: #252525;
+  /* font-size: 26px; */
+}
+
+.login__logoWrap {
+  padding: 145px 0px 200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginPage_wrap {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.loginPage_logo>a {
+  display: block;
+  width: 160px;
+  height: 40px;
+  background-image: url(../IMG/logo.png);
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 145px;
+  left: 170px;
+  z-index: 2;
+}
+
+.loginPage_Img {
+  width: 65%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.loginPage_Img img {
+  display: block;
+  background-size: cover;
+}
+
+
+.loginBox_wrap {
+  width: 35%;
+  padding: 100px 80px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid rgba(83, 81, 61, 0.3);
+  justify-content: center;
+}
+
+
+
+.id_box {
+  width: 100%;
+  margin-bottom: 5px;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+.pw_box {
+  width: 100%;
+  margin-bottom: 5px;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background-color: #252525;
+  color: #fff;
+}
+
+.login_subBtn {
+  text-align: center;
+  margin: 20px 0 35px;
+
+}
+
+.joinBtn {
+  background-color: transparent;
+  border: none;
+  /* color: #fff; */
+}
+
+.login_subBtn>span {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1px;
+  height: 13px;
+  background-color: #252525;
+  position: absolute;
+  transform: translateY(50%);
+  margin-left: 3px;
+}
+
+.findIdBtn {
+  background-color: transparent;
+  border: none;
+  /* color: #fff; */
+}
+
+.findPwBtn {
+  background-color: transparent;
+  border: none;
+  /* color: #fff; */
+}
+
+.login_sns {
+  margin-bottom: 50px;
+}
+
+.login_sns>div {
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.login_sns span {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  float: left;
+}
+
+.login_naver {
+  background-color: #27D34A;
+  color: #ffffff;
+}
+
+.login_naver>span {
+  background-image: url(../img/login_naver.png);
+}
+
+.login_kakao {
+  background-color: #FFD953;
+}
+
+.login_kakao>span {
+  background-image: url(../img/login_kakao.png);
+}
+
+.login_google {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.login_google>span {
+  background-image: url(../img/login_google.png);
+}
+
+.login_facebook {
+  background-color: #4469B0;
+  color: #ffffff;
+}
+
+.login_facebook>span {
+  background-image: url(../img/login_facebook.png);
+}
+
+
+.loginBox_logo {
+  width: 130px;
+  height: 30px;
+  margin: 0 auto;
+  background-image: url(../IMG/logo_bk.png);
+  background-position: center center;
+  background-size: cover;
+  margin-top: 50px;
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .login__logoWrap {
+    flex-wrap: wrap;
+    padding: 100px 0px 100px;
+  }
+
+  .loginPage_wrap {
+    width: 100%;
+
+  }
+
+  .login__logoWrap .logo_bk {
+    margin-bottom: 100px;
+  }
+
+  .loginBox_wrap {
+    width: 45%;
+    padding: 100px 50px;
+    border: none;
+  }
+
+}
+
+@media (max-width: 1080px) {
+  .loginPage_Img {
+    display: none;
+  }
+
+  .loginBox_wrap {
+    width: 100%;
+    padding: 150px 60px 200px;
+  }
+
+  .idpw_box {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .login_sns {
+    width: 60%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .login__logoWrap .logo_bk {
+    margin-bottom: 100px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .login__logoWrap .logo_bk {
+    margin-bottom: 20px;
+  }
+
+  .login__logoWrap {
+    padding: 20px;
+  }
+
+  .join_wrap {
+    width: 90%;
+  }
+
+
+
+
+  .loginBox_wrap {
+    flex-direction: column;
+    padding: 100px 60px 150px;
+  }
+
+  .login_sns {
+    border: none;
+  }
+
+  .login_sns {
+    width: 100%;
+    padding: 0;
+  }
+
+  .idpw_box {
+    width: 100%;
+  }
+
+  .logo_bk>a {
+    width: 130px;
+    height: 30px;
+  }
+}

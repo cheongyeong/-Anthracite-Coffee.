@@ -1,0 +1,211 @@
+.board__logoWrap{
+width: 84%;
+padding: 145px 0px 100px;
+box-sizing: border-box;
+margin: 0 auto;
+}
+
+
+.contact_img{
+  background-image: url(../../IMG/contact_main.jpg);
+  width: 100%; 
+  background-size: cover;
+  background-position: bottom;
+  box-sizing: border-box;
+  padding-bottom: 9%;
+}
+
+
+.sampleRequest_wrap{
+  width: 84%;
+  margin: 0 auto;
+}
+
+.sub_nav{
+   width: 100%;
+   margin-bottom: 100px;
+}
+h6{
+  font-size: 25px;
+  font-weight: 400;
+  display: block;
+}
+.sub_nav_title{
+  width: 84%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  
+}
+.sub_nav_wrap{
+  width: 100%;
+  background-color: #EBEADE;
+  padding: 30px 0;
+}
+.sub_nav_list{
+  width: 84%;
+  margin: 0 auto;
+  display: flex;
+  
+}
+.sub_nav_list>li>a{
+  color: #53513D;
+  font-size: 14px;
+  margin-right: 50px;
+}
+.sub_nav_list li a:hover{
+  text-decoration: underline;
+}
+
+.sampleRequest_wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.sampleRequest_infoTxt{
+  width: 25%;
+  margin-right: 100px;
+}
+
+.sampleRequest_formWrap{
+  width: 75%;
+  max-width: 1100px;
+}
+
+.formTitle_Fixed{
+  color: rgba(83, 81, 61, 0.5);
+  padding-bottom: 15px;
+  border-bottom: 1px solid #53513D;
+}
+.board_lock{
+  opacity: 0.5;
+}
+.form_userInfo>div{
+  width:40%
+}
+.form_userInfo label{
+  display: inline-block;
+  margin-right: 10px;
+}
+.form_userInfo input{
+  border: 1px solid rgba(83, 81, 61, 0.5);
+  width: 200px; height: 30px;
+  background-color: transparent;
+}
+.form_userInfo{
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(83, 81, 61, 0.5);
+  margin-bottom:15px 0 ;
+}
+
+.form_contents{
+  width: 100%;
+  padding: 15px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #53513D;
+  margin-bottom: 15px;
+}
+.form_contentsBox{
+  width: 99%; height: 300px;
+  background-color: transparent;
+  border-bottom: 1px solid #53513D;
+}
+.form_Buttons{
+  float: right;
+}
+.cancleBtn{
+  width: 80px; height: 35px;
+  background-color: transparent;
+  border: 1px solid #53513D;
+  font-size: 13px;
+  cursor: pointer;
+  float: left;
+}
+.confirmBtn{
+  width: 80px; height: 35px;
+  background-color: #53513D;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+    
+}
+
+
+@media (max-width: 1200px){
+  .sampleRequest_wrap {
+    flex-wrap: wrap;
+  }
+  .sampleRequest_infoTxt{
+    width: 100%;
+    margin-right: 0;
+  }
+  .sampleRequest_contents{
+    width: 100%;
+    max-width: 1100px;
+  }
+  .board__logoWrap{
+    padding: 100px 0px 50px;
+  }
+  .sampleRequest_infoTxt{
+    margin-bottom: 50px;
+  }
+  .sampleRequest_infoTxt>p{
+    margin-bottom: 15px;
+  }
+  .sampleRequest_formWrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px){
+  td{
+    font-size: 14px;
+  }
+  .list_header_title {
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 768px){
+  .contact_main {
+    padding-bottom: 100px;
+  }
+  .sampleRequest_wrap {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  th{
+    font-size: 14px;
+  }
+  h6{
+    font-size: 20px;
+  }
+  .board__logoWrap{
+    width: 100%;
+    padding: 20px;
+  }
+  .sub_nav_title {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .sub_nav {
+    margin-bottom: 80px;
+  }
+  .sampleRequest_img {
+    padding-bottom: 100%;
+  }
+  .form_userInfo{
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+  .form_userInfo>div{
+    width: 100%;
+  }
+  .writer{
+    margin-bottom: 10px;
+  }
+}
+
+

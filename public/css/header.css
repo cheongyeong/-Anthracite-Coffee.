@@ -1,0 +1,231 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+header a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.hd_notice {
+  width: 100%;
+  text-align: center;
+  background-color: #252525;
+  padding: 10px 0;
+}
+
+.hd_notice>a:hover {
+  text-decoration: underline;
+}
+
+.hd_nav {
+  width: 100%;
+  background-color: #53513D;
+  padding: 30px 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hd_nav_left {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.search>a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../../IMG/search.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hd_menu {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+
+.hd_menu span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hd_menu>span:nth-child(2) {
+  margin: 7px 0;
+}
+
+.hd_right {
+  display: flex;
+  align-items: center;
+}
+
+.hd_right>li>a {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.login {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 50px;
+  cursor: pointer;
+}
+
+.myPage>a {
+  width: 17px;
+  height: 17px;
+  background-image: url(../../IMG/mypage.png)
+}
+
+.myBag>a {
+  width: 19px;
+  height: 19px;
+  background-image: url(../../IMG/bag.png);
+  margin-left: 30px;
+}
+
+
+
+.sub_nav {
+  width: 100%;
+  height: 100vh;
+  color: #53513D;
+  background-color: #FFFEF2;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+.show {
+  opacity: 1;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+  body {
+    padding-top: 124px;
+  }
+
+  .hd_nav {
+    padding: 30px 20px;
+    position: relative;
+  }
+
+
+
+  .logo_kr {
+    display: inline-block;
+    background-image: url(../img/logo_kr.png);
+    width: 150px;
+    height: 27px;
+    background-size: cover;
+  }
+
+
+  .sub_menuTopBtn {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+  }
+
+  .sub_loginBtn {
+    background-color: transparent;
+    color: #53513D;
+    font-size: 15px;
+  }
+
+  .closeBtn {
+    display: inline-block;
+    background-image: url(../img/close.png);
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin-left: 15px;
+  }
+
+  .subMenu_title {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #53513D;
+    padding-bottom: 10px;
+  }
+
+  .underline {
+    width: 100%;
+    height: 1px;
+    background-color: #53513D;
+    margin-bottom: 15px;
+  }
+
+  .subMenu_list {
+    margin-bottom: 15px;
+  }
+
+  .subMenu_list a {
+    color: #53513D;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    padding: 7px;
+    box-sizing: border-box;
+  }
+
+  .subMenu_list a:hover {
+    font-weight: 600;
+  }
+
+
+
+  .search {
+    position: absolute;
+    right: 120px;
+  }
+
+  .logo>a {
+    width: 130px;
+    height: 30px;
+  }
+
+  .myBag>a {
+    margin-left: 15px;
+  }
+
+
+}

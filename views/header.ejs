@@ -1,0 +1,91 @@
+<header>
+  <div class="hd_notice">
+    <a href="/contact">샘플 신청 안내</a>
+  </div>
+  <div class="hd_nav">
+    <button id=show class="hd_menu mobile" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="hd_nav_left">
+      <li class="desk"><a href="/about">ABOUT</a></li>
+      <li class="desk"><a href="">STORE</a></li>
+      <li class="desk"><a href="">SHOP</a></li>
+      <li class="desk"><a href="/contact">CONTACT</a></li>
+      <li class="desk"><a href="">WHOLE SALE</a></li>
+      <li class="search"><a href=""></a></li>
+    </ul>
+    <ul class="hd_right">
+      <button class="login" id="show" onclick="location.href='/login'">log in</button>
+      <li class="myBag"><a href=""></a></li>
+    </ul>
+  </div>
+
+
+
+  <div class="sub_nav mobile">
+    <h1 class="logo_kr"></h1>
+    <div class="sub_menuTopBtn">
+      <button class="sub_loginBtn" id="show" onclick="location.href='/login'">log in</button>
+      <button id=close class="closeBtn"></button>
+    </div>
+    <div class="underline"></div>
+    <div class="sub_menu">
+      <div class="subMenu_wrap">
+        <button class="subMenu_title" type="button" onclick="location.href='/about'">ABOUT</button>
+      </div>
+      <div class="subMenu_wrap">
+        <button class="subMenu_title">STORE</button>
+        <div class="subMenu_list">
+          <a href="">합정점</a>
+          <a href="">연희점</a>
+          <a href="">서교점</a>
+          <a href="">한남점</a>
+          <a href="">제주 한림점</a>
+        </div>
+      </div>
+      <div class="subMenu_wrap">
+        <button class="subMenu_title">SHOP</button>
+        <div class="subMenu_list">
+          <a href="">Blend</a>
+          <a href="">Single Origin</a>
+          <a href="">Cold Brew</a>
+          <a href="">Subscription</a>
+        </div>
+      </div>
+      <div class="subMenu_wrap">
+        <button class="subMenu_title" type="button" onclick="location.href='/contact'">CONTACT</button>
+        <div class="subMenu_list">
+          <a href="/contact">샘플 신청 안내</a>
+          <a href="">납품문의 및 상담신청</a>
+          <a href="">주문 안내</a>
+        </div>
+      </div>
+      <div class="subMenu_wrap">
+        <button class="subMenu_title">WHOLE SALE</button>
+        <div class="subMenu_list">
+          <a href="">도매 회원 사이트 바로가기</a>
+          <a href="">파트너스 문의하기</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function show() {
+      document.querySelector(".sub_nav").className = "sub_nav show";
+    }
+
+    function close() {
+      document.querySelector(".sub_nav").className = "sub_nav";
+    }
+
+    document.querySelector("#show").addEventListener("click", show);
+    document.querySelector("#close").addEventListener("click", close);
+  </script>
+
+
+</header>

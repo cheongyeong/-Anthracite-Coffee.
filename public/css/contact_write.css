@@ -1,0 +1,120 @@
+.board__logoWrap{
+width: 84%;
+padding: 145px 0px 100px;
+box-sizing: border-box;
+margin: 0 auto;
+}
+
+.contact_img{
+  background-image: url(../../IMG/contact_main.jpg);
+  width: 100%; 
+  background-size: cover;
+  background-position: bottom;
+  box-sizing: border-box;
+  padding-bottom: 9%;
+}
+
+.form_userInfo{
+  display: flex;
+}
+.sampleRequest_wrap{
+  width: 84%;
+  margin: 0 auto;
+}
+
+.sub_nav{
+   width: 100%;
+   margin-bottom: 100px;
+}
+h6{
+  font-size: 25px;
+  font-weight: 400;
+  display: block;
+}
+.sub_nav_title{
+  width: 84%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  
+}
+.sub_nav_wrap{
+  width: 100%;
+  background-color: #EBEADE;
+  padding: 30px 0;
+}
+.sub_nav_list{
+  width: 84%;
+  margin: 0 auto;
+  display: flex;
+  
+}
+
+.sub_nav_list li a:hover{
+  text-decoration: underline;
+}
+
+.sampleRequest_wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.sampleRequest_infoTxt{
+  width: 25%;
+}
+.sampleRequest_formWrap{
+  width: 75%;
+  max-width: 1100px;
+}
+
+.formTitle_Fixed{
+  color: rgba(83, 81, 61, 0.5);
+  padding-bottom: 15px;
+  border-bottom: 1px solid #53513D;
+}
+.board_lock{
+  opacity: 0.5;
+}
+
+.form_userInfo{
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(83, 81, 61, 0.5);
+  margin-bottom:15px 0 ;
+}
+
+.form_contents{
+  width: 100%;
+  padding: 15px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #53513D;
+}
+.form_contentsBox{
+  width: 99%; height: 300px;
+  background-color: transparent;
+  border-bottom: 1px solid #53513D;
+}
+.form_Buttons{
+  float: right;
+  cursor: pointer;
+}
+
+.confirmBtn{
+  width: 80px; height: 35px;
+  background-color: #53513D;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+textarea{
+	font-family: 'Noto Sans KR', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+strong{
+  font-size: 13px;
+  color:rgba(83, 81, 61, 0.8);
+  text-align: right;
+  margin-left: 20px;
+}
+
+
