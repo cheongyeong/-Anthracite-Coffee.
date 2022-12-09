@@ -99,7 +99,14 @@
 .joinBtn {
   background-color: transparent;
   border: none;
+  font-size: 14px;
+  padding: 0 10px;
+  box-sizing: border-box;
   /* color: #fff; */
+}
+
+.login_subBtn {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .login_subBtn>span {
@@ -116,13 +123,16 @@
 .findIdBtn {
   background-color: transparent;
   border: none;
-  /* color: #fff; */
+  padding: 0 10px;
+  box-sizing: border-box;
+
 }
 
 .findPwBtn {
   background-color: transparent;
   border: none;
-  /* color: #fff; */
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .login_sns {
@@ -161,6 +171,7 @@
 
 .login_kakao {
   background-color: #FFD953;
+  color: #252525;
 }
 
 .login_kakao>span {
@@ -170,6 +181,7 @@
 .login_google {
   background-color: #fff;
   border: 1px solid #ccc;
+  color: #252525;
 }
 
 .login_google>span {

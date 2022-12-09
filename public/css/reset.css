@@ -219,3 +219,7 @@ footer li {
 .tab {
   display: none;
 }
+
+.noto {
+  font-family: 'Noto Sans KR', sans-serif;
+}

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/contact.css">
@@ -16,11 +18,11 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/join.css">
   <link rel="stylesheet" href="css/login.css">
-  
-  
-  
+
+
+
   <title>Anthracite Coffee</title>
-  
+
 </head>
 
 <body>
@@ -33,12 +35,16 @@
   <div id="footer">
     <%- include('footer') %>
   </div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/about.js"></script>
   <script src="js/footer.js"></script>
 </body>
 
-  
+
 </html>

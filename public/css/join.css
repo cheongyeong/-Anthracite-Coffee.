@@ -1,13 +1,14 @@
-.join_page{
+.join_page {
   width: 100%;
 }
 
-.join_popup{
+.join_popup {
   width: 100%;
   display: flex;
   position: relative;
 }
-.joinPage_img{
+
+.joinPage_img {
   width: 50%;
   background-image: url(../IMG/main2.jpg);
   /* max-width: 1200px; */
@@ -16,42 +17,44 @@
   box-sizing: border-box;
 }
 
-.logo>a{
+.logo>a {
   display: block;
-  width: 160px; height: 40px;
+  width: 160px;
+  height: 40px;
   background-image: url(../IMG/logo_bk.png);
   background-position: center center;
   background-size: cover;
   position: absolute;
-  top: 145px; left: 170px;
+  top: 145px;
+  left: 170px;
 
 }
 
 
-.joinPage_wrap{
+.joinPage_wrap {
   width: 50%;
   background-color: #FFF;
-  padding: 145px 15px; 
+  padding: 145px 15px;
   box-sizing: border-box;
 
 
 }
 
 
-.join_wrap{
+.join_wrap {
   width: 80%;
   margin: 0 auto;
   /* box-sizing: border-box; */
 }
 
-.join_Title{
+.join_Title {
   display: block;
   width: 100%;
   color: #252525;
   font-size: 26px;
 }
 
-.joinForm_inputBox{
+.joinForm_inputBox {
   width: 100%;
   padding: 30px;
   border-top: 3px solid rgba(0, 0, 0, 0.8);
@@ -60,31 +63,35 @@
 
 }
 
-.form_room td{
+.form_room td {
   padding: 10px;
 }
-.form_room th{
+
+.form_room th {
   padding-left: 50px;
   padding-right: 0px;
   text-align: left;
-
+  font-size: 14px;
 }
-#postcode{
+
+#postcode {
   width: 55%;
   height: 35px;
   margin-top: 10px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.5)
 }
-#postcode_button{
+
+#postcode_button {
   width: 30%;
   height: 40px;
-  border:  none;
+  border: none;
   margin-left: 10px;
   background-color: #252525;
   color: #fff;
 }
-#road_adress{
+
+#road_adress {
   width: 90%;
   height: 35px;
   background-color: transparent;
@@ -92,7 +99,7 @@
   margin-top: 10px;
 }
 
-.join-input{
+.join-input {
   width: 90%;
   margin: 10px 0;
   height: 35px;
@@ -100,10 +107,11 @@
   border: 1px solid rgba(0, 0, 0, 0.5)
 }
 
-.form_room{
+.form_room {
   font-size: 13px;
 }
-.join_completeBtn{
+
+.join_completeBtn {
   width: 100%;
   text-align: right;
   margin: 20px 0 100px;
@@ -111,7 +119,7 @@
 
 
 
-.join_completeBtn input{
+.join_completeBtn input {
   width: 20%;
   padding: 15px 20px;
   border: none;
@@ -119,34 +127,57 @@
   color: #ffffff;
 }
 
-.joinlogo_bk{
+.joinlogo_bk {
   display: block;
-  width: 120px; height: 30px;
+  width: 120px;
+  height: 30px;
   background-image: url(../img/logo_bk.png);
   background-position: center center;
   background-size: cover;
   margin: 0 auto;
 }
 
-::-webkit-scrollbar { width: 5px; margin-right: 10px; } 
+::-webkit-scrollbar {
+  width: 5px;
+  margin-right: 10px;
+}
 
-::-webkit-scrollbar-track { background-color:#fff; } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
 
-::-webkit-scrollbar-thumb { background: #252525; border-radius: 10px; } /* 실질적 스크롤 바 */
+/* 스크롤 바 밑의 배경 */
 
-::-webkit-scrollbar-thumb:hover { background: #404040; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 10px;
+}
 
-::-webkit-scrollbar-button { display: none; } /* 스크롤 바 상 하단 버튼 */
+/* 실질적 스크롤 바 */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 스크롤 바 상 하단 버튼 */
 
 
-@media(max-width: 1200px){
+@media(max-width: 1200px) {
   .logo>a {
     top: 100px;
     left: 100px;
   }
+
   .joinPage_wrap {
     padding: 100px 15px;
   }
+
   .form_room th {
     padding-left: 10px;
 
@@ -154,10 +185,11 @@
 }
 
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .joinPage_img {
     display: none;
   }
+
   .joinPage_wrap {
     width: 100%;
   }
