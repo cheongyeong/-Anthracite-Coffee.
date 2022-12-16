@@ -3,7 +3,8 @@ var connection = mysql.createConnection({
   host: 'us-cdbr-east-06.cleardb.net',
   user: 'b772bba59ddeb2',
   password: 'a4f115f4',
-  database: 'heroku_bbc89dee32d6896'
+  database: 'heroku_bbc89dee32d6896',
+  multipleStatements: true
 });
 
 
