@@ -31,10 +31,10 @@
       <article class="formContents_page">
         <div class="contentsPage_header">
           <div>
-            <span><%= row.id %></span>
+            <span name="id"><%= row.id %></span>
             <span class="contentsPage_HeaderTitle"><span class="board_lock"></span>샘플신청합니다.</span>
-            <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
             <span class="contentsPage_HeaderName" name="writer"><%= row.writer %></span>
+            <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
           </div>
           </tr>
           </thead>
@@ -47,8 +47,8 @@
         <input class="listBtn" type="button" value="목록" onclick="location.href='/contact'">
         <div class="form_Buttons">
           <input class="editBtn" type="button" value="수정"
-            onclick="javascript:location.href='/editForm?id=<%= row.id %>'">
-          <input class="deleteBtn" type="submit" value="삭제" onclick="deleteBtn()"
+            onclick="javascript:location.href='/contact_edit?id=<%= row.id %>'">
+          <input class="deleteBtn" type="submit" value="삭제"
             onclick="javascript:location.href='/deleteForm?id=<%= row.id %>'">
         </div>
 
@@ -56,11 +56,3 @@
 
 
     </div>
-
-
-
-    <script>
-      function deleteBtn() {
-        alert('정말 삭제하시겠습니까?');
-      }
-    </script>

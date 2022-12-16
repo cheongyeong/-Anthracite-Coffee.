@@ -39,7 +39,8 @@
       </article>
 
       <div class="sampleRequest_formWrap">
-        <form method="POST" action="/editForm" class="requestForm">
+
+        <form method="post" action="/editForm" class="requestForm">
           <div class="formTitle_Fixed">
             <input type="hidden" name="id" value="<%= row.id %>">
           </div>
@@ -54,13 +55,15 @@
             </div>
           </div>
           <div class="form_contents">
-            <textarea class="form_contentsBox" name="textBox"><%= row.textBox %></textarea>
+            <textarea class="form_contentsBox" name="textBox">
+              <%= row.textBox %>
+            </textarea>
           </div>
           <input class="cancleBtn" type="button" value="취소" onclick="location.href='/contact'">
           <div class="form_Buttons">
             <input class="deleteBtn" type="button" value="삭제"
-              onclick="javascript:location.href='/deleteform?id=<%= row.id %>'" onclick="deleteBtn()">
-            <input class="confirmBtn" type="button" value="완료">
+              onclick="javascript:location.href='/deleteform?id=<%= row.id %>'">
+            <input class="confirmBtn" type="submit" value="완료">
           </div>
         </form>
       </div>

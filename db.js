@@ -1,12 +1,9 @@
-const {
-  name
-} = require('ejs');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '1234',
-  database: 'Anthracite'
+  database: 'anthracite'
 });
 
 
@@ -18,7 +15,7 @@ connection.connect(function (err) {
 
 
 function applyForm(callback) {
-  connection.query("SELECT * FROM sampleBoard ORDER BY id desc", (err, rows) => {
+  connection.query("SELECT * FROM sampleboard ORDER BY id desc", (err, rows) => {
     callback(rows);
   })
 };
@@ -43,8 +40,8 @@ function applyFormByid(id, callback) {
 
 
 // id가 일치하는 부분을 수정하는 함수
-function editForm(id, writer, textBox, callback) {
-  connection.query(`UPDATE sampleboard set writer='${writer}', create_time=now(), textbox='${textBox}', where id = ${id}`, (err) => {
+function editForm(id, textBox, writer, callback) {
+  connection.query(`UPDATE sampleboard set create_time=now(), textBox='${textBox}', writer='${writer}' where id = ${id}`, (err) => {
     if (err) throw err;
     callback();
 
@@ -58,6 +55,13 @@ function deleteByid(id, callback) {
   })
 
 }
+
+// function insertProduct(img, name, price, callback) {
+//   connection.query(`INSERT INTO prduct1(create_time,img,name,price) values(NOW(),'${img}','${name}',${price})`, (err) => {
+//     if (err) throw err;
+//     callback();
+//   })
+// }
 
 
 module.exports = {

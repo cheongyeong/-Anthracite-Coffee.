@@ -115,12 +115,12 @@ header a {
   left: 0;
   z-index: 1000;
   z-index: -1;
-  opacity: 0;
+  display: none;
 }
 
 
 .show {
-  opacity: 1;
+  display: block;
   z-index: 1000;
   transition: all 0.5s ease-in-out;
 }
@@ -147,7 +147,7 @@ header a {
 
 
   .logo_kr {
-    display: inline-block;
+    display: block;
     background-image: url(../img/logo_kr.png);
     width: 150px;
     height: 27px;
@@ -156,8 +156,10 @@ header a {
 
 
   .sub_menuTopBtn {
-    display: inline-block;
-    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
     vertical-align: middle;
   }
 

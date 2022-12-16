@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const fs = require('fs');
 const path = require('path');
 const {
   nextTick
@@ -30,25 +32,27 @@ router.get('/newNotice', (req, res) => {
 router.get('/about', (req, res) => {
   res.render('about');
 });
-
-router.get('/contact_page', (req, res) => {
-  res.render('contact_page');
-});
-
-router.get('/contact_edit', (req, res) => {
-  res.render('contact_edit');
+router.get('/contact_write', (req, res) => {
+  res.render('contact_write');
 });
 
 
 
 
 
-// router.get('/contact_edit', (req, res) => { // newmemo
-//   res.render('contact_edit');
-// });
+router.post('/writeForm', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let writer = param['writer'];
+  let textBox = param['textBox'];
 
-router.get('/contact', (req, res) => { //getmemo
-  db.applyForm((rows) => {
+  db.insertForm(writer, textBox, () => {
+    res.redirect('contact');
+  })
+});
+
+
+router.get('/contact', (req, res) => {
+  db.applyForm((rows, index) => {
     res.render('contact', {
       rows: rows
     });
@@ -56,45 +60,30 @@ router.get('/contact', (req, res) => { //getmemo
 });
 
 
-router.get('/contact_write', (req, res) => {
-  res.render('contact_write');
-});
-
-
-router.post('/writeForm', (req, res) => { //writememo
-  let param = JSON.parse(JSON.stringify(req.body));
-  let writer = param['writer'];
-  let create_time = param['create_time']
-  let textBox = param['textBox']; // html name 값을 '' 안에
-
-  db.insertForm(writer, textBox, () => { //insertMemo
-    res.redirect('contact');
-  })
-});
 
 
 
-
-
-router.get('/contact_edit', (req, res) => { //updatememo
+router.get('/contact_edit', (req, res) => {
   let id = req.query.id;
-  db.applyFormByid(id, (row) => { //getMemoByid
+  db.applyFormByid(id, (row) => {
     res.render('contact_edit', {
       row: row[0]
     })
   });
 })
 
-router.post('/editForm', (req, res) => { //updatememo
+
+
+router.post('/editForm', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
-  let id = param['id']; // html name 값을 '' 안에
-  let textBox = param['textBox']; // html name 값을 '' 안에
+  let id = param['id'];
+  let textBox = param['textBox'];
   let writer = param['writer'];
-  db.editForm(id, writer, textBox, () => {
+  db.editForm(id, textBox, writer, () => {
     res.redirect('contact');
   })
-
 })
+
 
 
 
@@ -106,8 +95,11 @@ router.get('/contact_page', (req, res) => {
     res.render('contact_page', {
       row: row[0]
     })
-  });
+  })
+
 })
+
+
 
 
 
@@ -124,6 +116,11 @@ router.get('/deleteForm', (req, res) => {
 
 
 
+
+
+// done(null, '../public/uploads/');
+
+// if (!fs.existsSync('../public/uploads')) fs.mkdirSync('public/uploads') //폴더를 생성
 
 
 
