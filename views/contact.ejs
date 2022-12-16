@@ -5,21 +5,15 @@
         <h1>
     </section>
     </div>
-    <nav class="sub_nav">
-      <div class="sub_nav_title">
-        <h6>CONTACT</h6>
-      </div>
-      <div class="sub_nav_wrap">
-        <ul class="sub_nav_list">
-          <li class="this_page"><a href="/contact">샘플 신청 안내</a></li>
-          <li><a href="">납품문의 및 상담신청</a></li>
-          <li><a href="">주문안내</a></li>
-        </ul>
-      </div>
+    <nav class="shop_submenu">
+      <ul>
+        <li><a href="/notice">공지사항</a></li>
+        <li><a href="/contact">샘플 신청 안내</a></li>
+      </ul>
     </nav>
     <div class="sampleRequest_wrap">
       <article class="sampleRequest_infoTxt">
-        <h1>샘플 신청</h1>
+        <h1>샘플 신청 안내</h1>
         <p>샘플은 블렌딩 6종 중 희망하시는 상품을 선택하신 후
           게시판에 신청서를 작성해주시면 순차적으로 연락을 드립니다.</p>
         <p>
@@ -46,16 +40,33 @@
               </tr>
             </thead>
             <tbody class="list_body">
+              <% rows.forEach((row, index)=>{ %>
               <tr class="list_line">
-                <td>01</td>
+                <td><%= row.id %></td>
                 <td class="list_body_title">
-                  <span class="board_lock"></span>샘플신청합니다.</td>
-                <td>박**</td>
-                <td>2022-11-16</td>
+                  <div>
+                    <a onclick="javascript:location.href='/contact_page?id=<%= row.id %>'">
+                      <span class="board_lock"></span>
+                      샘플신청합니다.
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <a href='/contact_page?id=<%= row.id %>'><%= row.writer %></a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <a href='/contact_page?id=<%= row.id %>'><%= row.create_time %></a>
+                  </div>
+                </td>
               </tr>
+              <% }); %>
             </tbody>
           </table>
           <input class="writeBtn" type="button" value="글쓰기" onclick="location.href='/contact_write'"></a></input>
+
 
         </div>
       </article>

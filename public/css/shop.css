@@ -1,0 +1,151 @@
+.W-fix {
+  width: 84%;
+  margin: 0 auto;
+}
+
+
+.shop_submenu {
+  width: 100%;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  background-color: #EBEADE;
+  margin-bottom: 100px;
+}
+
+.shop_submenu ul {
+  width: 84%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.shop_submenu ul>li:nth-child(1) {
+  margin-right: 60px;
+}
+
+.shop_submenu ul>li {
+  margin-right: 30px;
+}
+
+.shoplogo_wrap {
+  width: 84%;
+  padding: 145px 0px 100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+
+.blend-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
+.blend-list .list-box {
+  width: 33%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+}
+
+.blend-list .list-box h4 {
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(83, 81, 61, 0.7);
+  ;
+}
+
+.blend-list .list-box label {
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.pd_li_0 {
+  padding-top: 100%;
+  background-image: url(../img/shop_drip.jpg);
+  background-position: center center;
+}
+
+.pd_li_5 {
+  padding-top: 100%;
+  background-image: url(../img/item5.jpg);
+  background-position: center center;
+}
+
+.pd_li_6 {
+  padding-top: 100%;
+  background-image: url(../img/item6.jpg);
+  background-position: center center;
+}
+
+.pd_li_7 {
+  padding-top: 100%;
+  background-image: url(../img/item7.jpg);
+}
+
+.pd_li_8 {
+  padding-top: 100%;
+  background-image: url(../img/item8.jpg);
+  background-size: cover;
+}
+
+.pd_li_9 {
+  padding-top: 100%;
+  background-image: url(../img/item9.jpg);
+  background-size: cover;
+}
+
+.pd_li_10 {
+  padding-top: 100%;
+  background-image: url(../img/item10.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.pd_li_11 {
+  padding-top: 100%;
+  background-image: url(../img/item11.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+
+
+
+
+.logo_kr {
+  background-image: url(../img/logo_kr.png);
+  width: 200px;
+  height: 35px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.price {
+  margin-bottom: 40px;
+  color: rgba(83, 81, 61, 0.7);
+
+}
+
+.blend-list .item_txt {
+  text-align: center;
+  border-bottom: 2px solid #53513D;
+  margin-bottom: 0px;
+}
+
+.list-box:hover {
+  background-color: #f0efe1;
+}
+
+.list-box:nth-child(1) {
+  padding-left: 0px;
+}
+
+.list-box:nth-child(1):hover {
+  background-color: transparent;
+}

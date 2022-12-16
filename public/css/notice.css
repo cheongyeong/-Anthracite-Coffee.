@@ -1,0 +1,66 @@
+.notice-wrap h1 {
+  text-align: center;
+
+}
+
+.notice-editBtn {
+  background-color: #f0efe1;
+  border-radius: 3px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: none;
+  color: rgba(83, 81, 61, 0.8);
+}
+
+.notice-deleteBtn {
+  background-color: transparent;
+  border: none;
+}
+
+
+
+
+
+/* 작성페이지 */
+
+.notice-contents {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
+.notice-contents textarea {
+  width: 100%;
+  border: 1px solid rgba(83, 81, 61, 0.8);
+
+}
+
+.noticeTitle-wrap>input {
+  width: 300px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(83, 81, 61, 0.8);
+  margin-left: 20px;
+
+}
+
+.confirm {
+  width: 80px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid rgba(83, 81, 61, 0.8);
+  font-size: 13px;
+  float: right;
+  cursor: pointer;
+}
+
+.notice-login input {
+  width: 200px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(83, 81, 61, 0.8);
+  margin-left: 30px;
+  margin-top: 15px;
+
+}

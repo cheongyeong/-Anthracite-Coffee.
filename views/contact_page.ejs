@@ -1,14 +1,14 @@
   <main class="contact_main">
-    <!-- <div class="contact_img"> -->
-     <section class="board__logoWrap">
-        <h1 class="logo_bk"><a href="a"></a><h1>
-     </section>
+    <section class="board__logoWrap">
+      <h1 class="logo_bk"><a href="a"></a>
+        <h1>
+    </section>
     </div>
     <nav class="sub_nav">
       <div class="sub_nav_title">
         <h6>CONTACT</h6>
       </div>
-        <div class="sub_nav_wrap">
+      <div class="sub_nav_wrap">
         <ul class="sub_nav_list">
           <li class="this_page"><a href="/contact">샘플 신청 안내</a></li>
           <li><a href="">납품문의 및 상담신청</a></li>
@@ -26,43 +26,41 @@
         </p>
         <p>
           원두샘플의 기본 판매중량은 500g입니다.
-        </p>  
+        </p>
       </article>
       <article class="formContents_page">
-        <div  class="contentsPage_header">
+        <div class="contentsPage_header">
           <div>
+            <span><%= row.id %></span>
             <span class="contentsPage_HeaderTitle"><span class="board_lock"></span>샘플신청합니다.</span>
-            <span class="contentsPage_HeaderDate">2022-11-23</span>
-            <span class="contentsPage_HeaderName" name="writer"><%= data.writer %></span>
+            <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
+            <span class="contentsPage_HeaderName" name="writer"><%= row.writer %></span>
           </div>
-            </tr>
+          </tr>
           </thead>
         </div>
         <div class="contentsPage_body">
-          <p class="contentsPage_text" name="textBox">
-            <%= data.textBox %></p>
-        </div>        
-        <input class="listBtn"type="button" value="목록" onclick="location.href='/contact'">
-        <div class="form_Buttons">
-          <input class="editBtn" type="submit" value="수정" onclick="location.href='/contact_edit'">
-          <input class="deleteBtn" type="submit" value="삭제" onclick="deleteForm()">
+          <p class="contentsPage_text" name="textBox"><%= row.textBox %>
+
+          </p>
         </div>
-      
+        <input class="listBtn" type="button" value="목록" onclick="location.href='/contact'">
+        <div class="form_Buttons">
+          <input class="editBtn" type="button" value="수정"
+            onclick="javascript:location.href='/editForm?id=<%= row.id %>'">
+          <input class="deleteBtn" type="submit" value="삭제" onclick="deleteBtn()"
+            onclick="javascript:location.href='/deleteForm?id=<%= row.id %>'">
+        </div>
+
       </article>
-          
-  
+
+
     </div>
-  
+
 
 
     <script>
-      function deleteForm(){
+      function deleteBtn() {
         alert('정말 삭제하시겠습니까?');
       }
     </script>
-  
-
-  
-  
-  
-  
