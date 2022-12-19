@@ -99,11 +99,6 @@ router.get('/contact_page', (req, res) => {
 
 })
 
-
-
-
-
-
 router.get('/deleteForm', (req, res) => {
   let id = req.query.id;
   console.log(id);
@@ -114,14 +109,50 @@ router.get('/deleteForm', (req, res) => {
 
 
 
+// 썸네일 리스트 페이지 get 
 
 
 
+router.get('/shop', (req, res) => {
+  db.getShop((rows, index) => {
+    res.render('shop', {
+      rows: rows
+    });
+  })
+});
 
-// done(null, '../public/uploads/');
 
-// if (!fs.existsSync('../public/uploads')) fs.mkdirSync('public/uploads') //폴더를 생성
+const upload = multer({
+  storage: multer.diskStorage({
+    destination(req, file, done) {
+      done(null, '../public/uploads/');
+    },
+    filename(req, file, done) {
+      const ext = path.extname(file.originalname); //파일의 확장자
+      done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 + 확장자명
+    }
+  }),
+  limits: {
+    fileSize: 1024 * 1024 * 2
+  } //2메가까지 업로드 가능
+})
 
+router.get('/shop_upload', (req, res) => {
+  res.render('shop_upload');
+})
+
+
+router.post('/productW', upload.single('product_img'), (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let shopImg = 'uploads/' + req.file.filename;
+  let productTitle = param['productTitle'];
+  let price = param['price'];
+  let infoTextFIRST = param['infoTextFIRST'];
+  let infoTextSECOND = param['infoTextSECOND'];
+  db.insertProduct(shopImg, productTitle, price, infoTextFIRST, infoTextSECOND, () => {
+    res.redirect('shop');
+  })
+})
 
 
 

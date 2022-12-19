@@ -20,131 +20,27 @@
          <br>앤트러사이트만의 개성 강한 블랜드를 경험하세요.
        </p>
      </div>
+
      <div class="list-box">
        <a href="">
-         <div class="product-img"><img src=""></div>
+         <div class="product-img"><img src="<%= row.shopImg %>"></div>
          <div class="item_txt">
-           <h3>Blend Drip Bag Set</h3>
-           <h3 class="price">12,000원</h3>
+           <h3><%= row.productTitle %></h3>
+           <h3 class="price"><%= row.price %></h3>
          </div>
-         <h4>6가지 블랜드 원두를 모두 즐길 수 있는 드립백 세트</h4>
-         <h4>6ea * 1set</h4>
+         <h4><%= row.infoTextFIRST %></h4>
+         <h4><%= infoTextSECOND %></h4>
        </a>
      </div>
-     <!-- <div class="list-box"><a href="">
-         <div class="pd_li_6"></div>
-         <div class="item_txt">
-           <h3>윌리엄브레이크</h3>
-           <h3 class="price">16,000원</h3>
-         </div>
-         <h4><label>플레이버 </label> 데이트(대추야자), 블랙커런트, 카카오닙</h4>
-         <h4><label>로스팅 레벨 </label> 다크 Dark </h4>
-       </a>
-     </div>
-     <div class="list-box"><a href="">
-         <div class="pd_li_1"></div>
-         <div class="item_txt">
-           <h3>버터 팻 트리오</h3>
-           <h3 class="price">13,000원</h3>
-         </div>
-         <h4><label>플레이버 </label>볶은 견과, 스파이시, 다크 초콜렛</h4>
-         <h4><label>로스팅 레벨 </label> 미디움 다크 Medium Dark </h4>
-       </a>
-     </div>
-     <div class="list-box"><a href="">
-         <div class="pd_li_2"></div>
-         <div class="item_txt">
-           <h3>히스토리 미스터리</h3>
-           <h3 class="price">12,000원</h3>
-         </div>
-         <h4><label>플레이버 </label>견과류, 브라운 슈가, 카카오</h4>
-         <h4><label>로스팅 레벨 </label>다크 Dark </h4>
-       </a>
-     </div>
-     <div class="list-box"><a href="">
-         <div class="pd_li_3"></div>
-         <div class="item_txt">
-           <h3>공기와 꿈</h3>
-           <h3 class="price">17,000원</h3>
-         </div>
-         <h4><label>플레이버 </label>복합적인 플로럴, 레드커런트, 자몽, 캐슈넛</h4>
-         <h4><label>로스팅 레벨 </label>미디움 라이트 Medium Light </h4>
-       </a>
-     </div>
-     <div class="list-box"><a href="">
-         <div class="pd_li_4"></div>
-         <div class="item_txt">
-           <h3>파블로 네루다</h3>
-           <h3 class="price">16,000원</h3>
-         </div>
-         <h4><label>플레이버 </label>크렌베리, 스트로베리, 헤즐넛 브라운슈가</h4>
-         <h4><label>로스팅 레벨 </label>미디움 라이트 Medium Light </h4>
-       </a>
-     </div>
-     <div class="list-box"><a href="">
-         <div class="pd_li_5"></div>
-         <div class="item_txt">
-           <h3>나쓰메 소세키</h3>
-           <h3 class="price">14,000원</h3>
-         </div>
-         <h4><label>플레이버 </label>시트러스, 아몬드, 밀크초콜릿</h4>
-         <h4><label>로스팅 레벨 </label>미디움 Medium </h4>
-       </a>
-     </div>
-     <div class="list-box"><a>
-         <div class="pd_li_7"></div>
-         <div class="item_txt">
-           <h3>청명 single origin</h3>
-           <h3 class="price">17,000원</h3>
-         </div>
-         <h4>다양한 종류의 "청명" 싱글 오리진</h4>
-         <h4><label>종류</label> 에티오피아(코카, 짐마) / 브라질 / 케냐 / 콜롬비아(디카페인) / 과테말라</h4>
-       </a>
-     </div>
-     <div class="list-box"><a>
-         <div class="pd_li_8"></div>
-         <div class="item_txt">
-           <h3>콜드브루 윌리엄 블레이크 </h3>
-           <h3 class="price">15,000원</h3>
-         </div>
-         <h4><label>중량</label>300mL</h4>
-         <h4><label>노트</label>카카오, 볶은 아몬드, 볶은 땅콩, 초콜렛</h4>
-       </a>
-     </div>
-     <div class="list-box"><a>
-         <div class="pd_li_9"></div>
-         <div class="item_txt">
-           <h3>콜드브루 BOX 윌리엄 블레이크 </h3>
-           <h3 class="price">35,000원</h3>
-         </div>
-         <h4><label>중량</label>1L / 2L</h4>
-         <h4><label>노트</label>카카오, 볶은 아몬드, 볶은 땅콩, 초콜렛</h4>
-       </a>
-     </div>
-
-     <div class="list-box"><a>
-         <div class="pd_li_10"></div>
-         <div class="item_txt">
-           <h3>콜드브루 디카페인</h3>
-           <h3 class="price">17,000원</h3>
-         </div>
-         <h4><label>중량</label>300mL / 1L</h4>
-         <h4><label>노트</label>시나몬, 스윌, 몰라세스, 코코아, 다크초콜렛</h4>
-       </a>
-     </div>
-     <div class="list-box"><a>
-         <div class="pd_li_11"></div>
-         <div class="item_txt">
-           <h3>Subscription - Blend Series </h3>
-           <h3 class="price">90,000원</h3>
-         </div>
-         <h4>앤트러사이트 블랜드를 매주 수요일 배송</h4>
-         <h4><label>구성</label> 블랜드 6종 외 Seasonal Blend 상품으로 구성</h4>
-       </a>
-     </div> -->
-
 
    </div>
+   <div class="W-fix uploadBtn-wrap">
+     <input class="uploadBtn" type="button" value="상품등록" onclick="location.href='/shop_upload'"></a></input>
+
+   </div>
+
+
+
 
 
 

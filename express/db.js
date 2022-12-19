@@ -57,12 +57,28 @@ function deleteByid(id, callback) {
 
 }
 
-// function insertProduct(img, name, price, callback) {
-//   connection.query(`INSERT INTO prduct1(create_time,img,name,price) values(NOW(),'${img}','${name}',${price})`, (err) => {
-//     if (err) throw err;
-//     callback();
-//   })
-// }
+
+
+
+
+
+
+
+
+function getShop(callback) {
+  connection.query('SELECT * FROM shopupload order by id desc', (err, rows) => {
+    if (err) throw err;
+    callback(rows);
+  })
+};
+
+function insertProduct(shopImg, productTitle, price, infoTextFIRST, infoTextSECOND, callback) {
+  connection.query(`INSERT INTO shopupload(shopImg,productTitle,price,infoTextFIRST,infoTextSECOND,create_time)
+    values('${shopImg}','${productTitle}','${price}','${infoTextFIRST}','${infoTextSECOND}',NOW())`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+}
 
 
 module.exports = {
@@ -70,5 +86,7 @@ module.exports = {
   insertForm,
   applyFormByid,
   editForm,
-  deleteByid
+  deleteByid,
+  getShop,
+  insertProduct
 };
