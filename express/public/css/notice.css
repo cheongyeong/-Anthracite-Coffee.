@@ -1,3 +1,9 @@
+.notice-wrap {
+  margin-bottom: 0;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
 .notice-wrap h1 {
   text-align: center;
 

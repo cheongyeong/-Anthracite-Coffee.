@@ -5,7 +5,6 @@
    </div>
    <nav class="shop_submenu">
      <ul>
-       <li>ALL</li>
        <li>Blend</li>
        <li>Single Origin</li>
        <li>Cold Brew</li>
@@ -28,8 +27,8 @@
            <h3><%= row.productTitle %></h3>
            <h3 class="price"><%= row.price %></h3>
          </div>
-         <h4><%= row.infoTextFIRST %></h4>
-         <h4><%= row.infoTextSECOND %></h4>
+         <h4><label>로스팅레벨</label><%= row.infoTextFIRST %></h4>
+         <h4><label>플레이버</label><%= row.infoTextSECOND %></h4>
        </a>
      </div>
      <% }); %>

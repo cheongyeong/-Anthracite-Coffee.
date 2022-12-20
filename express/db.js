@@ -24,7 +24,7 @@ function applyForm(callback) {
 
 function insertForm(writer, textBox, callback) {
   connection.query(`INSERT INTO sampleboard(writer, create_time, textBox)
-  values('${writer}',NOW(),'${textBox}')`, (err) => {
+  values('${writer}',now(),'${textBox}')`, (err) => {
     if (err) throw err;
     callback();
   })
