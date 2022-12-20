@@ -8,7 +8,7 @@
 
 /* main 시작 */
 .mainImg {
-  background-image: url(../../IMG/main.jpg);
+  background-image: url(../IMG/main.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
   display: block;
   width: 160px;
   height: 40px;
-  background-image: url(../../IMG/logo.png);
+  background-image: url(../IMG/logo.png);
   background-position: center center;
   background-size: cover;
 }
@@ -65,7 +65,7 @@
   box-sizing: border-box;
   width: 190px;
   height: 385px;
-  background-image: url(../../IMG/coffe.png);
+  background-image: url(../IMG/coffe.png);
   background-size: cover;
   background-position: center;
 }
@@ -244,11 +244,11 @@
 
 .jeju_1 {
   width: 100%;
-  background-image: url(../../IMG/jeju_1.jpg);
+  background-image: url(../IMG/jeju_1.jpg);
 }
 
 .jeju_2 {
-  background-image: url(../../IMG/jeju_2.jpg);
+  background-image: url(../IMG/jeju_2.jpg);
 }
 
 .banner {
@@ -346,7 +346,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(../../IMG/more2.png);
+  background-image: url(../IMG/more2.png);
 }
 
 .product_wrap h1 {
@@ -378,12 +378,12 @@
 
 .pd_li_1 {
   padding-top: 100%;
-  background-image: url(../../img/item1.jpg);
+  background-image: url(../img/item1.jpg);
   background-position: left center;
 }
 
 .pd_li_2 {
-  background-image: url(../../img/item2.jpg);
+  background-image: url(../img/item2.jpg);
   background-position: left center;
   padding-top: 100%;
 
@@ -391,13 +391,13 @@
 
 .pd_li_3 {
   padding-top: 100%;
-  background-image: url(../../img/item3.jpg);
+  background-image: url(../img/item3.jpg);
   background-position: center center;
 }
 
 .pd_li_4 {
   padding-top: 100%;
-  background-image: url(../../img/item4.jpg);
+  background-image: url(../img/item4.jpg);
   background-position: center center;
 }
 
