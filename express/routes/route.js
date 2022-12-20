@@ -7,7 +7,20 @@ const {
   nextTick
 } = require('process');
 const db = require('../db.js');
-
+const upload = multer({
+  storage: multer.diskStorage({
+    destination(req, file, done) {
+      done(null, 'public/uploads');
+    },
+    filename(req, file, done) {
+      const ext = path.extname(file.originalname); //파일의 확장자
+      done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 + 확장자명
+    }
+  }),
+  limits: {
+    fileSize: 1024 * 1024 * 2
+  }
+})
 
 
 
@@ -19,9 +32,7 @@ router.get('/main', (req, res) => {
   res.render('main');
 });
 
-router.get('/shop', (req, res) => {
-  res.render('shop');
-});
+
 router.get('/notice', (req, res) => {
   res.render('notice');
 });
@@ -38,6 +49,11 @@ router.get('/contact_write', (req, res) => {
 
 
 
+
+
+
+
+//샘플 신청 게시판 연결 // 
 
 
 router.post('/writeForm', (req, res) => {
@@ -60,9 +76,6 @@ router.get('/contact', (req, res) => {
 });
 
 
-
-
-
 router.get('/contact_edit', (req, res) => {
   let id = req.query.id;
   db.applyFormByid(id, (row) => {
@@ -71,7 +84,6 @@ router.get('/contact_edit', (req, res) => {
     })
   });
 })
-
 
 
 router.post('/editForm', (req, res) => {
@@ -83,8 +95,6 @@ router.post('/editForm', (req, res) => {
     res.redirect('contact');
   })
 })
-
-
 
 
 
@@ -109,7 +119,27 @@ router.get('/deleteForm', (req, res) => {
 
 
 
-// 썸네일 리스트 페이지 get 
+//썸네일 리스트 페이지 get   // 
+
+
+
+
+router.post('/productUpload', upload.single('shopImg'), (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let shopImg = 'uploads/' + req.file.filename;
+  let productTitle = param['productTitle'];
+  let price = param['price'];
+  let infoTextFIRST = param['infoTextFIRST'];
+  let infoTextSECOND = param['infoTextSECOND'];
+  db.insertProduct(shopImg, productTitle, price, infoTextFIRST, infoTextSECOND, () => {
+    res.redirect('shop');
+  })
+})
+
+router.get('/shop_upload', (req, res) => {
+  res.render('shop_upload');
+});
+
 
 
 
@@ -122,44 +152,97 @@ router.get('/shop', (req, res) => {
 });
 
 
-const upload = multer({
-  storage: multer.diskStorage({
-    destination(req, file, done) {
-      done(null, '../public/uploads/');
-    },
-    filename(req, file, done) {
-      const ext = path.extname(file.originalname); //파일의 확장자
-      done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 + 확장자명
-    }
-  }),
-  limits: {
-    fileSize: 1024 * 1024 * 2
-  } //2메가까지 업로드 가능
-})
+
 
 router.get('/shop_upload', (req, res) => {
-  res.render('shop_upload');
+  let id = req.query.id;
+  db.getShopByid(id, (row) => {
+    res.render('shop_upload', {
+      row: row[0]
+    })
+  });
 })
 
 
-router.post('/productW', upload.single('product_img'), (req, res) => {
+
+router.get('/shop_edit', (req, res) => {
+  let id = req.query.id;
+  db.getShopByid(id, (row) => {
+    res.render('shop_edit', {
+      row: row[0]
+    })
+  });
+})
+
+
+
+router.post('/editShop', upload.single('shopImg'), (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
+  let id = param['id'];
   let shopImg = 'uploads/' + req.file.filename;
   let productTitle = param['productTitle'];
   let price = param['price'];
   let infoTextFIRST = param['infoTextFIRST'];
   let infoTextSECOND = param['infoTextSECOND'];
-  db.insertProduct(shopImg, productTitle, price, infoTextFIRST, infoTextSECOND, () => {
+  db.editShop(id, shopImg, productTitle, price, infoTextFIRST, infoTextSECOND, () => {
     res.redirect('shop');
   })
 })
 
 
+router.get('/shop_detail', (req, res) => {
+  let id = req.query.id;
+  console.log(id);
+  db.getShopByid(id, (row) => {
+    res.render('shop_detail', {
+      row: row[0]
+    })
+  })
+
+})
+
+router.get('/deleteShop', (req, res) => {
+  let id = req.query.id;
+  console.log(id);
+  db.deleteShopByid(id, () => {
+    res.redirect('shop')
+  })
+});
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//회원가입 // 
 
 
 router.get('/join', (req, res) => {

@@ -1,10 +1,9 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host: 'us-cdbr-east-06.cleardb.net',
-  user: 'b772bba59ddeb2',
-  password: 'a4f115f4',
-  database: 'heroku_bbc89dee32d6896',
-  multipleStatements: true
+  host: 'localhost',
+  user: 'root',
+  password: '1234',
+  database: 'anthracite',
 });
 
 
@@ -42,7 +41,8 @@ function applyFormByid(id, callback) {
 
 // id가 일치하는 부분을 수정하는 함수
 function editForm(id, textBox, writer, callback) {
-  connection.query(`UPDATE sampleboard set create_time=now(), textBox='${textBox}', writer='${writer}' where id = ${id}`, (err) => {
+  connection.query(`UPDATE sampleboard set create_time=now(),
+  textBox='${textBox}', writer='${writer}' where id = ${id}`, (err) => {
     if (err) throw err;
     callback();
 
@@ -59,14 +59,14 @@ function deleteByid(id, callback) {
 
 
 
-
+//썸네일 리스트 // 
 
 
 
 
 
 function getShop(callback) {
-  connection.query('SELECT * FROM shopupload order by id desc', (err, rows) => {
+  connection.query('SELECT * FROM shopupload order by id desc', (err, rows, fields) => {
     if (err) throw err;
     callback(rows);
   })
@@ -80,6 +80,31 @@ function insertProduct(shopImg, productTitle, price, infoTextFIRST, infoTextSECO
   })
 }
 
+function getShopByid(id, callback) {
+  connection.query(`select * from shopupload where id=${id}`, (err, row) => {
+    if (err) throw err;
+    callback(row);
+  }) // table 안에 특정값만 불러오고 싶으면 () 안에 작성 
+}
+
+function editShop(id, shopImg, productTitle, price, infoTextFIRST, infoTextSECOND, callback) {
+  connection.query(`UPDATE shopupload set shopImg='${shopImg}', productTitle='${productTitle}', price='${price}',
+  infoTextFIRST='${infoTextFIRST}', infoTextSECOND='${infoTextSECOND}' where id = ${id}`, (err) => {
+    if (err) throw err;
+    callback();
+
+  })
+}
+
+function deleteShopByid(id, callback) {
+  connection.query(`DELETE from shopupload where id = ${id}`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+
+}
+
+
 
 module.exports = {
   applyForm,
@@ -88,5 +113,8 @@ module.exports = {
   editForm,
   deleteByid,
   getShop,
-  insertProduct
+  insertProduct,
+  getShopByid,
+  editShop,
+  deleteShopByid
 };

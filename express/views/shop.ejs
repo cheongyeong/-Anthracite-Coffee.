@@ -20,18 +20,19 @@
          <br>앤트러사이트만의 개성 강한 블랜드를 경험하세요.
        </p>
      </div>
-
+     <% rows.forEach((row, index)=>{ %>
      <div class="list-box">
-       <a href="">
+       <a onclick="javascript:location.href='/shop_detail?id=<%= row.id %>'">
          <div class="product-img"><img src="<%= row.shopImg %>"></div>
          <div class="item_txt">
            <h3><%= row.productTitle %></h3>
            <h3 class="price"><%= row.price %></h3>
          </div>
          <h4><%= row.infoTextFIRST %></h4>
-         <h4><%= infoTextSECOND %></h4>
+         <h4><%= row.infoTextSECOND %></h4>
        </a>
      </div>
+     <% }); %>
 
    </div>
    <div class="W-fix uploadBtn-wrap">

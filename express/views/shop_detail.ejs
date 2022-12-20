@@ -1,0 +1,34 @@
+<div class="shoplogo_wrap">
+  <h1 class="logo_bk"><a href="/"></a></h1>
+</div>
+<nav class="shop_submenu">
+  <ul>
+    <li>ALL</li>
+    <li>Blend</li>
+    <li>Single Origin</li>
+    <li>Cold Brew</li>
+    <li>Subscription</li>
+  </ul>
+</nav>
+
+<article class="shopDetail-wrap">
+  <input type="hidden" name="id" value="<%= row.id %>">
+  <div class="shop-wrap">
+    <div class="shop-img" name="shopImg"><img src="<%= row.shopImg %>"></div>
+    <div class="shop-info">
+      <div class="productTitle"><%= row.productTitle %></div>
+      <div class="productprice"><%= row.price %></div>
+      <div class="infoTextFIRST"><%= row.infoTextFIRST %></div>
+      <div class="infoTextSECOND"><%= row.infoTextSECOND %></div>
+      <div class="shop-cartBtn">
+        <input type="button" class="cartBtn" value="카트에 담기">
+      </div>
+    </div>
+
+  </div>
+  <div class="form_Buttons">
+    <input class="editBtn" type="button" value="수정" onclick="javascript:location.href='/shop_edit?id=<%= row.id %>'">
+    <input class="deleteBtn" type="submit" value="삭제" onclick="javascript:location.href='/deleteShop?id=<%= row.id %>'">
+  </div>
+
+</article>
