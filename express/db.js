@@ -1,9 +1,11 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'database-1.cq9sxzrqavcn.ap-northeast-2.rds.amazonaws.com',
   user: 'root',
-  password: '1234',
+  password: 'cjsrud1004-',
   database: 'anthracite',
+  dateStrings: 'date',
+  multipleStatements: true
 });
 
 
@@ -13,9 +15,19 @@ connection.connect(function (err) {
 });
 
 
+// 두개 테이블 데려고기 
+// function applyForm(callback) {
+//   connection.query("SELECT * FROM sampleboard ORDER BY id desc;"+"SELECT * FROM sampleboard ORDER BY id desc;", (err, rows) => {
+//     let rows0 = rows[0]
+//     let rows1 = rows[1]
+//     if (err) throw err;
+//     callback(rows0, rows1);
+//   })
+// };
+
 
 function applyForm(callback) {
-  connection.query("SELECT * FROM sampleboard ORDER BY id desc", (err, rows) => {
+  connection.query("SELECT * FROM sampleboard ORDER BY id desc;", (err, rows) => {
     callback(rows);
   })
 };
