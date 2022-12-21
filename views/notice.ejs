@@ -25,14 +25,19 @@
           </tr>
         </thead>
         <tbody class="list_body">
+          <% rows.forEach((row, index)=>{ %>
           <tr class="list_line">
             <td><%= row.id %></td>
-            <td class="list_body_title"><%= row.noticeTitle %></td>
+            <td class="list_body_title">
+              <a onclick="javascript:location.href='/contact_page?id=<%= row.id %>'"></a>
+              <%= row.noticeTitle %>
+            </td>
             <td>관리자</td>
             <td><%= row.create_time %></td>
             <td><input class="notice-editBtn" type="button" value="수정" onclick="location.href='/notice_edit'"></td>
             <td><input class="notice-deleteBtn" type="button" value="X"></td>
           </tr>
+          <% }); %>
 
         </tbody>
       </table>

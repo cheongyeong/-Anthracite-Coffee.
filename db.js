@@ -119,15 +119,16 @@ function deleteShopByid(id, callback) {
 
 
 //공지사항 //
-function notice(callback) {
+
+function getNotice(callback) {
   connection.query("SELECT * FROM noticeboard ORDER BY id desc", (err, rows) => {
     callback(rows);
   })
 };
 
-function insertMemo(noticeTitle, noticeContent, callback) {
-  connection.query(`INSERT INTO noticeboard(noticeTitle,create_time,noticeContent)
-  values('${noticeTitle}',NOW(),'${noticeContent}')`, (err) => {
+function insertNotice(noticeTitle, noticeContent, callback) {
+  connection.query(`INSERT INTO memotable( noticeTitle, noticeContent)
+  values('${noticeTitle}','${noticeContent}')`, (err) => {
     if (err) throw err;
     callback();
   })
@@ -135,31 +136,6 @@ function insertMemo(noticeTitle, noticeContent, callback) {
 
 
 
-function getNoticeByid(id, callback) {
-  connection.query(`select * from noticeboard where id=${id}`, (err, row) => {
-    if (err) throw err;
-    callback(row);
-  }) // table 안에 특정값만 불러오고 싶으면 () 안에 작성 
-}
-
-
-// id가 일치하는 부분을 수정하는 함수
-function updateMemo(id, noticeContent, callback) {
-  connection.query(`UPDATE noticeboard set create_time=now(),noticeContent='${noticeContent}'
-  where id = ${id}`, (err) => {
-    if (err) throw err;
-    callback();
-
-  })
-}
-
-function deleteNoticeByid(id, callback) {
-  connection.query(`DELETE from noticeboard where id = ${id}`, (err) => {
-    if (err) throw err;
-    callback();
-  })
-
-}
 
 
 
@@ -175,9 +151,7 @@ module.exports = {
   getShopByid,
   editShop,
   deleteShopByid,
-  notice,
-  insertMemo,
-  getNoticeByid,
-  updateMemo,
-  deleteNoticeByid
+  getNotice,
+
+
 };

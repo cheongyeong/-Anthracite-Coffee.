@@ -32,10 +32,6 @@ router.get('/main', (req, res) => {
   res.render('main');
 });
 
-
-router.get('/notice', (req, res) => {
-  res.render('notice');
-});
 router.get('/newNotice', (req, res) => {
   res.render('newNotice');
 });
@@ -215,9 +211,8 @@ router.get('/deleteShop', (req, res) => {
 
 //notice 게시판 //
 
-
 router.get('/notice', (req, res) => {
-  db.notice((rows, index) => {
+  db.getNotice((rows, index) => {
     res.render('notice', {
       rows: rows
     });
@@ -225,87 +220,21 @@ router.get('/notice', (req, res) => {
 });
 
 
-router.post('/writeNotice', (req, res) => {
-  let param = JSON.parse(JSON.stringify(req.body));
-  let noticeTitle = param['noticeTitle'];
-  let noticeContent = param['noticeContent'];
-
-  db.insertMemo(noticeTitle, noticeContent, () => {
-    res.redirect('notice');
-  })
-});
-
-
-
 router.get('/notice_write', (req, res) => {
   res.render('notice_write');
 });
 
 
-
-
-router.get('/notice_edit', (req, res) => {
-  let id = req.query.id;
-  db.getNoticeByid(id, (row) => {
-    res.render('notice_edit', {
-      row: row[0]
-    })
-  });
-})
-
-router.post('/editNotice', (req, res) => {
+router.post('/writeNotice', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
-  let id = param['id'];
-  let noticeContent = param['noticeContent'];
-  db.updateMemo(id, noticeContent, () => {
+
+  let noticeTitle = param['noticeTitle']; // html name 값을 '' 안에
+  let noticeContent = param['noticeContent']; // html name 값을 '' 안에
+
+  db.insertNotice(noticeTitle, noticeContent, () => {
     res.redirect('notice');
   })
-
-})
-
-
-router.get('/notice_detail', (req, res) => {
-  let id = req.query.id;
-  console.log(id);
-  db.getNoticeByid(id, (row) => {
-    res.render('notice_detail', {
-      row: row[0]
-    })
-  })
-
-})
-
-
-router.get('/deleteNotice', (req, res) => {
-  let id = req.query.id;
-  console.log(id);
-  db.deleteNoticeByid(id, () => {
-    res.redirect('notice')
-  })
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
