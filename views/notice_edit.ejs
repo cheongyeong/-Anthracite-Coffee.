@@ -10,19 +10,13 @@
 
 
 <div class="notice-contents">
-  <h1>공지사항 작성</h1>
-  <form method="post" action="/updateMemo">
+  <h1>공지사항 수정</h1>
+  <form method="post" action="/editNotice">
     <input type="hidden" name="id" value="<%= row.id %>">
     <div>
-      <textarea name="content" rows="20" cols="82">
-    <%= row.content %>
-  </textarea>
-    </div>
-    <div>
-      <input type="text" name="name" value=" <%= row.name %>">
-    </div>
-    <div>
-      <input type="date" name="time" value="<%= row.create_time %>">
+      <textarea name="noticeContent" rows="20" cols="82">
+        <%= row.noticeContent %>
+      </textarea>
     </div>
     <div>
       <input type="submit" value="확인">

@@ -14,7 +14,6 @@
     <div class="sampleRequest_listWrap">
       <div class="list_top_wrap">
         <input class="search_box" type="text" placeholder="search">
-        <input class="writeBtn" type="button" value="작성" onclick="location.href='/newNotice'"></a></input>
       </div>
       <table class="request_list_wrap">
         <thead class="list_header">
@@ -27,18 +26,18 @@
         </thead>
         <tbody class="list_body">
           <tr class="list_line">
-            <td>01</td>
-            <td class="list_body_title"> 납품문의 및 상담신청
-            </td>
-            <td>글슨이</td>
-            <td>작성일</td>
-            <td><input class="notice-editBtn" type="button" value="수정"></td>
+            <td><%= row.id %></td>
+            <td class="list_body_title"><%= row.noticeTitle %></td>
+            <td>관리자</td>
+            <td><%= row.create_time %></td>
+            <td><input class="notice-editBtn" type="button" value="수정" onclick="location.href='/notice_edit'"></td>
             <td><input class="notice-deleteBtn" type="button" value="X"></td>
           </tr>
 
         </tbody>
       </table>
 
+      <input class="writeBtn" type="button" value="작성" onclick="location.href='/newNotice'"></a></input>
 
     </div>
 

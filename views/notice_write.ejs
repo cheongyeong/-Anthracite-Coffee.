@@ -13,30 +13,17 @@
 <div class="notice-contents">
   <h1>공지사항 작성</h1>
   <div class="contents">
-    <h1>New Memo</h1>
-    <form method="post" action="/writeMemo" class="memo_form">
+    <form method="post" action="/writeNotice" class="memo_form">
       <div class="title-wrap">
         <label> 제목 : </label>
-        <input type="text" name="title">
-      </div>
-      <div class="title-wrap">
-        <p name="time">
+        <input type="text" name="noticeTitle">
       </div>
       <div>
-        <textarea name="content" rows="20" cols="82"></textarea>
+        <textarea name="noticeContent" rows="20" cols="82"></textarea>
       </div>
-      <div class="login">
-        <div>
-          <label>ID</label>
-          <input type="text" name="name">
-        </div>
-        <div>
-          <label>password</label>
-          <input type="password" name="pw">
-        </div>
-      </div>
-      <div class="conf_btn">
-        <input class="confirm" type="submit" value="확인">
-      </div>
-    </form>
   </div>
+  <div class="conf_btn">
+    <input class="confirm" type="submit" value="확인">
+  </div>
+  </form>
+</div>
