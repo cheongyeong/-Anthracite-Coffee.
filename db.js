@@ -118,6 +118,54 @@ function deleteShopByid(id, callback) {
 
 
 
+//공지사항 //
+function getMemo(callback) {
+  connection.query("SELECT * FROM memotable ORDER BY id desc", (err, rows) => {
+    callback(rows);
+  })
+};
+
+function insertMemo(cont, name, callback) {
+  connection.query(`INSERT INTO memotable(create_time, name, content)
+  values(NOW(),'${name}','${cont}')`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+};
+
+
+
+//memo중에 id가 일치하는 데이터만 추출
+//id는 primary Key로 같은 값을 갖고 잇으면 안됩니다. 고유키
+function getMemoByid(id, callback) {
+  connection.query(`select * from memotable where id=${id}`, (err, row) => {
+    if (err) throw err;
+    callback(row);
+  }) // table 안에 특정값만 불러오고 싶으면 () 안에 작성 
+}
+
+
+// id가 일치하는 부분을 수정하는 함수
+function updateMemo(id, cont, name, callback) {
+  connection.query(`UPDATE memotable set create_time=now(),name='${name}',content='${cont}'
+  where id = ${id}`, (err) => {
+    if (err) throw err;
+    callback();
+
+  })
+}
+
+function deleteNoticeByid(id, callback) {
+  connection.query(`DELETE from memotable where id = ${id}`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+
+}
+
+
+
+
 module.exports = {
   applyForm,
   insertForm,
@@ -128,5 +176,10 @@ module.exports = {
   insertProduct,
   getShopByid,
   editShop,
-  deleteShopByid
+  deleteShopByid,
+  getMemo,
+  insertMemo,
+  getMemoByid,
+  updateMemo,
+  deleteNoticeByid
 };

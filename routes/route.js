@@ -53,7 +53,7 @@ router.get('/contact_write', (req, res) => {
 
 
 
-//샘플 신청 게시판 연결 // 
+//샘플 신청 게시판 // 
 
 
 router.post('/writeForm', (req, res) => {
@@ -119,7 +119,7 @@ router.get('/deleteForm', (req, res) => {
 
 
 
-//썸네일 리스트 페이지 get   // 
+//썸네일 리스트 페이지 /shop // 
 
 
 
@@ -213,6 +213,74 @@ router.get('/deleteShop', (req, res) => {
 
 
 
+//notice 게시판 //
+
+router.get('/notice', (req, res) => {
+  db.getMemo((rows) => {
+    res.render('notice', {
+      rows: rows
+    });
+  })
+});
+
+
+router.get('/newmemo', (req, res) => {
+  res.render('newmemo');
+});
+
+router.post('/writeMemo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let cont = param['content']; // html name 값을 '' 안에
+  let name = param['name'];
+  let time = param['time'];
+
+  db.insertMemo(cont, name, () => {
+    res.redirect('notice');
+  })
+});
+
+
+
+router.get('/updateMemo', (req, res) => {
+  let id = req.query.id;
+  console.log(id);
+  db.getMemoByid(id, (row) => {
+    res.render('updateMemo', {
+      row: row[0]
+    })
+  });
+})
+
+router.post('/updateMemo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let id = param['id']; // html name 값을 '' 안에
+  let cont = param['content']; // html name 값을 '' 안에
+  let name = param['name'];
+  db.updateMemo(id, cont, name, () => {
+    res.redirect('notice');
+  })
+
+})
+
+router.get('/content', (req, res) => {
+  let id = req.query.id;
+  console.log(id)
+  db.getMemoByid(id, (row) => {
+    console.log(row)
+    res.render('content', {
+      row: row[0]
+    })
+  });
+})
+
+
+router.get('/deleteMemo', (req, res) => {
+  let id = req.query.id;
+  console.log(id);
+  db.deleteByid(id, () => {
+    res.redirect('notice')
+  })
+});
 
 
 
@@ -242,7 +310,9 @@ router.get('/deleteShop', (req, res) => {
 
 
 
-//회원가입 // 
+
+
+//회원가입 join // 
 
 
 router.get('/join', (req, res) => {
