@@ -1,73 +1,66 @@
-  <main class="contact_main">
-    <!-- <div class="contact_img"> -->
-    <section class="board__logoWrap">
-      <h1 class="logo_bk"><a href="/main"></a>
-        <h1>
-    </section>
-    </div>
-    <nav class="sub_nav">
-      <div class="sub_nav_title">
-        <h6>CONTACT</h6>
-      </div>
-      <div class="sub_nav_wrap">
-        <ul class="sub_nav_list">
-          <li class="this_page"><a href="/contact">샘플 신청 안내</a></li>
-          <li><a href="">납품문의 및 상담신청</a></li>
-          <li><a href="">주문안내</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="sampleRequest_wrap">
-      <article class="sampleRequest_infoTxt">
-        <h1>샘플 신청</h1>
-        <p>앤트러사이트커피 샘플원두 신청 페이지 입니다.</p>
-        <p>
-          양식에 맞게 신청서를 작성해주시면 확인 후 순차적으로 연락을 드립니다.
-        </p>
-        <p class="sampleRequest_formInfo">
-          · 업체명 : <br>
+<main class="contact_main">
+  <div class="shoplogo_wrap">
+    <h1 class="logo_bk"><a href="/"></a></h1>
+  </div>
+  <nav class="shop_submenu">
+    <ul>
+      <li><a href="/notice">공지사항</a></li>
+      <li><a href="/contact" style="text-decoration:underline;">샘플 신청 안내</a></li>
+    </ul>
+  </nav>
 
-          · 이름 :<br>
 
-          · 주소 :<br>
+  <div class="sampleRequest_wrap">
+    <article class="sampleRequest_infoTxt">
+      <h1>샘플 신청</h1>
+      <p>앤트러사이트커피 샘플원두 신청 페이지 입니다.</p>
+      <p>
+        양식에 맞게 신청서를 작성해주시면 확인 후 순차적으로 연락을 드립니다.
+      </p>
+      <p class="sampleRequest_formInfo">
+        · 업체명 : <br>
 
-          · 연락처 :<br>
+        · 이름 :<br>
 
-          · 받아보실 원두블렌딩 이름 :<br>
+        · 주소 :<br>
 
-          · 이메일 :</p>
-      </article>
+        · 연락처 :<br>
 
-      <div class="sampleRequest_formWrap">
+        · 받아보실 원두블렌딩 이름 :<br>
 
-        <form method="post" action="/editForm" class="requestForm">
-          <div class="formTitle_Fixed">
-            <input type="hidden" name="id" value="<%= row.id %>">
+        · 이메일 :</p>
+    </article>
+
+    <div class="sampleRequest_formWrap">
+
+      <form method="post" action="/editForm" class="requestForm">
+        <div class="formTitle_Fixed">
+          <input type="hidden" name="id" value="<%= row.id %>">
+        </div>
+        <div class="form_userInfo">
+          <div>
+            <label>글쓴이</label>
+            <input class="writer" type="text" name="writer" value="<%= row.writer %>">
           </div>
-          <div class="form_userInfo">
-            <div>
-              <label>글쓴이</label>
-              <input class="writer" type="text" name="writer" value="<%= row.writer %>">
-            </div>
-            <div>
-              <label>비밀번호</label>
-              <input type="password" name="pw">
-            </div>
+          <div>
+            <label>비밀번호</label>
+            <input type="password" name="pw">
           </div>
-          <div class="form_contents">
-            <textarea class="form_contentsBox" name="textBox">
+        </div>
+        <div class="form_contents">
+          <textarea class="form_contentsBox" name="textBox">
               <%= row.textBox %>
             </textarea>
-          </div>
-          <input class="cancleBtn" type="button" value="취소" onclick="location.href='/contact'">
-          <div class="form_Buttons">
-            <input class="deleteBtn" type="button" value="삭제"
-              onclick="javascript:location.href='/deleteform?id=<%= row.id %>'">
-            <input class="confirmBtn" type="submit" value="완료">
-          </div>
-        </form>
-      </div>
+        </div>
+        <input class="cancleBtn" type="button" value="취소" onclick="location.href='/contact'">
+        <div class="form_Buttons">
+          <input class="deleteBtn" type="button" value="삭제"
+            onclick="javascript:location.href='/deleteform?id=<%= row.id %>'">
+          <input class="confirmBtn" type="submit" value="완료">
+        </div>
+      </form>
     </div>
+  </div>
 
 
-  </main>
+</main>

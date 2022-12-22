@@ -1,58 +1,52 @@
-  <main class="contact_main">
-    <section class="board__logoWrap">
-      <h1 class="logo_bk"><a href="a"></a>
-        <h1>
-    </section>
-    </div>
-    <nav class="sub_nav">
-      <div class="sub_nav_title">
-        <h6>CONTACT</h6>
+<main class="contact_main">
+  <div class="shoplogo_wrap">
+    <h1 class="logo_bk"><a href="/"></a></h1>
+  </div>
+  <nav class="shop_submenu">
+    <ul>
+      <li><a href="/notice">공지사항</a></li>
+      <li><a href="/contact" style="text-decoration:underline;">샘플 신청 안내</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="sampleRequest_wrap">
+    <article class="sampleRequest_infoTxt">
+      <h1>샘플 신청</h1>
+      <p>샘플은 블렌딩 6종 중 희망하시는 상품을 선택하신 후
+        게시판에 신청서를 작성해주시면 순차적으로 연락을 드립니다.</p>
+      <p>
+        샘플비용은 유상이며 블렌딩에 따라 가격이 상이합니다.
+      </p>
+      <p>
+        원두샘플의 기본 판매중량은 500g입니다.
+      </p>
+    </article>
+    <article class="formContents_page">
+      <div class="contentsPage_header">
+        <div>
+          <input type="hidden" name="id" value="<%= row.id %>">
+          <span class="contentsPage_HeaderTitle"><span class="board_lock"></span>샘플신청합니다.</span>
+          <span class="contentsPage_HeaderName" name="writer"><%= row.writer %></span>
+          <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
+        </div>
+        </tr>
+        </thead>
       </div>
-      <div class="sub_nav_wrap">
-        <ul class="sub_nav_list">
-          <li class="this_page"><a href="/contact">샘플 신청 안내</a></li>
-          <li><a href="">납품문의 및 상담신청</a></li>
-          <li><a href="">주문안내</a></li>
-        </ul>
+      <div class="contentsPage_body">
+        <pre class="contentsPage_text" name="textBox"><%= row.textBox %>
+
+          </pre>
       </div>
-    </nav>
-    <div class="sampleRequest_wrap">
-      <article class="sampleRequest_infoTxt">
-        <h1>샘플 신청</h1>
-        <p>샘플은 블렌딩 6종 중 희망하시는 상품을 선택하신 후
-          게시판에 신청서를 작성해주시면 순차적으로 연락을 드립니다.</p>
-        <p>
-          샘플비용은 유상이며 블렌딩에 따라 가격이 상이합니다.
-        </p>
-        <p>
-          원두샘플의 기본 판매중량은 500g입니다.
-        </p>
-      </article>
-      <article class="formContents_page">
-        <div class="contentsPage_header">
-          <div>
-            <input type="hidden" name="id" value="<%= row.id %>">
-            <span class="contentsPage_HeaderTitle"><span class="board_lock"></span>샘플신청합니다.</span>
-            <span class="contentsPage_HeaderName" name="writer"><%= row.writer %></span>
-            <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
-          </div>
-          </tr>
-          </thead>
-        </div>
-        <div class="contentsPage_body">
-          <p class="contentsPage_text" name="textBox"><%= row.textBox %>
+      <input class="listBtn" type="button" value="목록" onclick="location.href='/contact'">
+      <div class="form_Buttons">
+        <input class="editBtn" type="button" value="수정"
+          onclick="javascript:location.href='/contact_edit?id=<%= row.id %>'">
+        <input class="deleteBtn" type="submit" value="삭제"
+          onclick="javascript:location.href='/deleteForm?id=<%= row.id %>'">
+      </div>
 
-          </p>
-        </div>
-        <input class="listBtn" type="button" value="목록" onclick="location.href='/contact'">
-        <div class="form_Buttons">
-          <input class="editBtn" type="button" value="수정"
-            onclick="javascript:location.href='/contact_edit?id=<%= row.id %>'">
-          <input class="deleteBtn" type="submit" value="삭제"
-            onclick="javascript:location.href='/deleteForm?id=<%= row.id %>'">
-        </div>
-
-      </article>
+    </article>
 
 
-    </div>
+  </div>

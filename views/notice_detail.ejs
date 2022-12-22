@@ -3,7 +3,7 @@
 </div>
 <nav class="shop_submenu">
   <ul>
-    <li><a href="/notice">공지사항</a></li>
+    <li><a href="/notice" style="text-decoration:underline;">공지사항</a></li>
     <li><a href="/contact">샘플 신청 안내</a></li>
   </ul>
 </nav>
@@ -11,16 +11,18 @@
 <article class="notice_page">
   <div class="noticePage_header">
     <div>
-      <input type="hidden" name="id" value="<%= row.id %>"></input>
       <span class="notice_HeaderTitle" name="noticeTitle"><%= row.noticeTitle %></span>
+      <input type="hidden" name="id" value="<%= row.id %>"></input>
+    </div>
+    <div class="notice_side">
       <span class="notice_HeaderName" name="writer">관리자</span>
       <span class="notice_HeaderDate" name="create_time"><%= row.create_time %></span>
     </div>
   </div>
   <div class="contentsPage_body">
-    <p class="contentsPage_text" name="noticeContents"><%= row.noticeContents %>
+    <pre class="contentsPage_text" name="noticeContents"><%= row.noticeContents %>
 
-    </p>
+    </pre>
   </div>
   <input class="listBtn" type="button" value="목록" onclick="location.href='/notice'">
   <div class="form_Buttons">

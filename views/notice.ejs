@@ -1,6 +1,9 @@
-<main>
-  <div class="shoplogo_wrap">
-    <h1 class="logo_bk"><a href="/"></a></h1>
+<main class="noticePage">
+  <div class="noticePage-img">
+    <div class="noticelogo_wrap">
+      <h1 class="logo_white"><a href="/"></a></h1>
+      <h2>공지사항</h2>
+    </div>
   </div>
   <nav class="shop_submenu">
     <ul>
@@ -10,10 +13,11 @@
   </nav>
 
   <section class="notice-wrap">
-    <h1>공지사항</h1>
     <div class="sampleRequest_listWrap">
       <div class="list_top_wrap">
-        <input class="search_box" type="text" placeholder="search">
+        <input class="writeBtn" type="button" value="작성" onclick="location.href='/notice_write'"></a></input>
+
+        <!-- <input class="search_box" type="text" placeholder="search"> -->
       </div>
       <table class="request_list_wrap">
         <thead class="list_header">
@@ -45,7 +49,6 @@
         </tbody>
       </table>
 
-      <input class="writeBtn" type="button" value="작성" onclick="location.href='/notice_write'"></a></input>
 
     </div>
 

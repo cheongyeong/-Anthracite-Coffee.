@@ -1,3 +1,16 @@
+.noticePage-img {
+  width: 100%;
+  background-image: url(../img/notice.jpg);
+  background-size: cover;
+  background-position: center;
+  /* padding-bottom: 15%; */
+}
+
+.noticePage>.shop_submenu {
+  margin-bottom: 50px;
+}
+
+
 .notice-wrap {
   margin-bottom: 0;
   padding-bottom: 200px;
@@ -7,6 +20,26 @@
 .notice-wrap h1 {
   text-align: center;
 
+}
+
+.noticelogo_wrap {
+  width: 84%;
+  padding: 150px 0px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.noticelogo_wrap>h2 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .notice-editBtn {
@@ -23,6 +56,10 @@
   border: none;
 }
 
+.list_top_wrap {
+  float: right;
+
+}
 
 
 
@@ -87,16 +124,18 @@
 
 .noticePage_header {
   width: 100%;
-  padding: 5px 15px;
+  padding: 7px 15px;
   box-sizing: border-box;
   font-size: 17px;
   border-top: 3px solid #53513D;
-  /* background-color: #F0EFE1; */
-  text-align: right;
+  background-color: #F0EFE1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.noticePage_header span {
-  text-align: right;
+.notice_side span {
+  float: right;
   margin-left: 20px;
   font-size: 14px;
   color: rgba(83, 81, 61, 0.5);
@@ -104,4 +143,9 @@
 
 .notice_HeaderTitle {
   font-size: 25px;
+  font-weight: 500;
+}
+
+.list_body_title a {
+  font-size: 16px;
 }
