@@ -42,13 +42,14 @@
 
 }
 
-.noticeTitle-wrap>input {
+
+
+.noticeTitle {
+  margin-bottom: 20px;
+  margin-left: 10px;
   width: 300px;
   height: 30px;
-  background-color: transparent;
   border: 1px solid rgba(83, 81, 61, 0.8);
-  margin-left: 20px;
-
 }
 
 .confirm {
@@ -69,4 +70,38 @@
   margin-left: 30px;
   margin-top: 15px;
 
+}
+
+
+
+/* datail 페이지  */
+
+.notice_page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 0 200px;
+  box-sizing: border-box;
+
+}
+
+.noticePage_header {
+  width: 100%;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border-top: 3px solid #53513D;
+  /* background-color: #F0EFE1; */
+  text-align: right;
+}
+
+.noticePage_header span {
+  text-align: right;
+  margin-left: 20px;
+  font-size: 14px;
+  color: rgba(83, 81, 61, 0.5);
+}
+
+.notice_HeaderTitle {
+  font-size: 25px;
 }

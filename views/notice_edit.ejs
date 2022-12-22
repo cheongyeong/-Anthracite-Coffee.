@@ -14,12 +14,14 @@
   <form method="post" action="/editNotice">
     <input type="hidden" name="id" value="<%= row.id %>">
     <div>
-      <textarea name="noticeContent" rows="20" cols="82">
-        <%= row.noticeContent %>
+      <label> 제목 : </label>
+      <input class="noticeTitle" type="text" name="noticeTitle" value="<%= row.noticeTitle %>">
+      <textarea name="noticeContents" rows="20" cols="82">
+        <%= row.noticeContents %>
       </textarea>
     </div>
-    <div>
-      <input type="submit" value="확인">
+    <div class="form_Buttons">
+      <input class="confirmBtn" type="submit" value="확인">
     </div>
   </form>
 </div>

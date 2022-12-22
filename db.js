@@ -27,9 +27,10 @@ connection.connect(function (err) {
 
 
 function applyForm(callback) {
-  connection.query("SELECT * FROM sampleboard ORDER BY id desc;", (err, rows) => {
-    callback(rows);
-  })
+  connection.query("SELECT * FROM sampleboard ORDER BY id desc;",
+    (err, rows) => {
+      callback(rows);
+    })
 };
 
 
@@ -47,11 +48,10 @@ function applyFormByid(id, callback) {
   connection.query(`select * from sampleboard where id=${id}`, (err, row) => {
     if (err) throw err;
     callback(row);
-  }) // table 안에 특정값만 불러오고 싶으면 () 안에 작성 
+  })
 }
 
 
-// id가 일치하는 부분을 수정하는 함수
 function editForm(id, textBox, writer, callback) {
   connection.query(`UPDATE sampleboard set create_time=now(),
   textBox='${textBox}', writer='${writer}' where id = ${id}`, (err) => {
@@ -121,23 +121,44 @@ function deleteShopByid(id, callback) {
 //공지사항 //
 
 function getNotice(callback) {
-  connection.query("SELECT * FROM noticeboard ORDER BY id desc", (err, rows) => {
-    callback(rows);
-  })
+  connection.query("SELECT * FROM noticeboard ORDER BY id desc",
+    (err, rows) => {
+      callback(rows);
+    })
 };
 
-function insertNotice(noticeTitle, noticeContent, callback) {
-  connection.query(`INSERT INTO memotable( noticeTitle, noticeContent)
-  values('${noticeTitle}','${noticeContent}')`, (err) => {
+function insertNotice(noticeTitle, noticeContents, callback) {
+  connection.query(`INSERT INTO noticeboard(noticeTitle,create_time,noticeContents)
+  values('${noticeTitle}',now(),'${noticeContents}')`, (err) => {
     if (err) throw err;
     callback();
   })
 };
 
+function getNoticeByid(id, callback) {
+  connection.query(`select * from noticeboard where id=${id}`, (err, row) => {
+    if (err) throw err;
+    callback(row);
+  })
+}
 
 
+function updateNotice(id, noticeTitle, noticeContents, callback) {
+  connection.query(`UPDATE noticeboard set create_time=now(),
+  noticeTitle='${noticeTitle}', noticeContents='${noticeContents}' where id = ${id}`, (err) => {
+    if (err) throw err;
+    callback();
 
+  })
+}
 
+function deleteNoticeByid(id, callback) {
+  connection.query(`DELETE from noticeboard where id = ${id}`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+
+}
 
 
 module.exports = {
@@ -152,6 +173,11 @@ module.exports = {
   editShop,
   deleteShopByid,
   getNotice,
+  insertNotice,
+  getNoticeByid,
+  updateNotice,
+  deleteNoticeByid
+
 
 
 };

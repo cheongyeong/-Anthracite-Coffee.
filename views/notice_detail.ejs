@@ -1,20 +1,28 @@
-<article class="formContents_page">
-  <div class="contentsPage_header">
+<div class="shoplogo_wrap">
+  <h1 class="logo_bk"><a href="/"></a></h1>
+</div>
+<nav class="shop_submenu">
+  <ul>
+    <li><a href="/notice">공지사항</a></li>
+    <li><a href="/contact">샘플 신청 안내</a></li>
+  </ul>
+</nav>
+
+<article class="notice_page">
+  <div class="noticePage_header">
     <div>
-      <span name="id"><%= row.id %></span>
-      <span class="contentsPage_HeaderTitle"><span class="board_lock"></span><%= row.noticeTitle %></span>
-      <span class="contentsPage_HeaderName" name="writer">관리자</span>
-      <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
+      <input type="hidden" name="id" value="<%= row.id %>"></input>
+      <span class="notice_HeaderTitle" name="noticeTitle"><%= row.noticeTitle %></span>
+      <span class="notice_HeaderName" name="writer">관리자</span>
+      <span class="notice_HeaderDate" name="create_time"><%= row.create_time %></span>
     </div>
-    </tr>
-    </thead>
   </div>
   <div class="contentsPage_body">
-    <p class="contentsPage_text" name="textBox"><%= row.noticeContent %>
+    <p class="contentsPage_text" name="noticeContents"><%= row.noticeContents %>
 
     </p>
   </div>
-  <input class="listBtn" type="button" value="목록" onclick="location.href='/contact'">
+  <input class="listBtn" type="button" value="목록" onclick="location.href='/notice'">
   <div class="form_Buttons">
     <input class="editBtn" type="button" value="수정" onclick="javascript:location.href='/notice_edit?id=<%= row.id %>'">
     <input class="deleteBtn" type="submit" value="삭제"

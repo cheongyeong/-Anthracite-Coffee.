@@ -32,15 +32,9 @@ router.get('/main', (req, res) => {
   res.render('main');
 });
 
-router.get('/newNotice', (req, res) => {
-  res.render('newNotice');
-});
 
 router.get('/about', (req, res) => {
   res.render('about');
-});
-router.get('/contact_write', (req, res) => {
-  res.render('contact_write');
 });
 
 
@@ -50,6 +44,11 @@ router.get('/contact_write', (req, res) => {
 
 
 //샘플 신청 게시판 // 
+
+router.get('/contact_write', (req, res) => {
+  res.render('contact_write');
+});
+
 
 
 router.post('/writeForm', (req, res) => {
@@ -96,7 +95,6 @@ router.post('/editForm', (req, res) => {
 
 router.get('/contact_page', (req, res) => {
   let id = req.query.id;
-  console.log(id);
   db.applyFormByid(id, (row) => {
     res.render('contact_page', {
       row: row[0]
@@ -107,7 +105,6 @@ router.get('/contact_page', (req, res) => {
 
 router.get('/deleteForm', (req, res) => {
   let id = req.query.id;
-  console.log(id);
   db.deleteByid(id, () => {
     res.redirect('contact')
   })
@@ -211,6 +208,26 @@ router.get('/deleteShop', (req, res) => {
 
 //notice 게시판 //
 
+
+
+
+router.get('/notice_write', (req, res) => {
+  res.render('notice_write');
+});
+
+
+
+router.post('/writeNotice', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let noticeTitle = param['noticeTitle'];
+  let noticeContents = param['noticeContents'];
+
+  db.insertNotice(noticeTitle, noticeContents, () => {
+    res.redirect('notice');
+  })
+});
+
+
 router.get('/notice', (req, res) => {
   db.getNotice((rows, index) => {
     res.render('notice', {
@@ -219,25 +236,44 @@ router.get('/notice', (req, res) => {
   })
 });
 
+router.get('/notice_edit', (req, res) => {
+  let id = req.query.id;
+  db.getNoticeByid(id, (row) => {
+    res.render('notice_edit', {
+      row: row[0]
+    })
+  });
+})
 
-router.get('/notice_write', (req, res) => {
-  res.render('notice_write');
-});
 
 
-router.post('/writeNotice', (req, res) => {
+router.post('/editNotice', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
-
-  let noticeTitle = param['noticeTitle']; // html name 값을 '' 안에
-  let noticeContent = param['noticeContent']; // html name 값을 '' 안에
-
-  db.insertNotice(noticeTitle, noticeContent, () => {
+  let id = param['id'];
+  let noticeTitle = param['noticeTitle'];
+  let noticeContents = param['noticeContents'];
+  db.updateNotice(id, noticeTitle, noticeContents, () => {
     res.redirect('notice');
   })
+
+})
+
+
+router.get('/notice_detail', (req, res) => {
+  let id = req.query.id;
+  db.getNoticeByid(id, (row) => {
+    res.render('notice_detail', {
+      row: row[0]
+    })
+  });
+})
+
+router.get('/deleteNotice', (req, res) => {
+  let id = req.query.id;
+  db.deleteNoticeByid(id, () => {
+    res.redirect('notice')
+  })
 });
-
-
-
 
 
 

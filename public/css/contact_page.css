@@ -100,11 +100,10 @@ h6 {
 
 .contentsPage_HeaderDate {
   float: right;
+  margin-right: 20px;
   font-size: 14px;
-  margin-left: 20px;
   color: rgba(83, 81, 61, 0.5);
 }
-
 
 
 

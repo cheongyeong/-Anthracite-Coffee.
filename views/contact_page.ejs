@@ -31,7 +31,7 @@
       <article class="formContents_page">
         <div class="contentsPage_header">
           <div>
-            <span name="id"><%= row.id %></span>
+            <input type="hidden" name="id" value="<%= row.id %>">
             <span class="contentsPage_HeaderTitle"><span class="board_lock"></span>샘플신청합니다.</span>
             <span class="contentsPage_HeaderName" name="writer"><%= row.writer %></span>
             <span class="contentsPage_HeaderDate" name="create_time"><%= row.create_time %></span>
