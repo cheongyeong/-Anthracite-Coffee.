@@ -41,13 +41,13 @@
   z-index: 2;
 }
 
-.loginPage_img {
+.loginPage_Img {
   width: 65%;
   box-sizing: border-box;
   position: relative;
 }
 
-.loginPage_img img {
+.loginPage_Img img {
   display: block;
   background-size: cover;
 }
@@ -237,6 +237,10 @@
 
 @media (max-width: 1080px) {
   .loginPage_img {
+    display: none;
+  }
+
+  .mySwiper5 {
     display: none;
   }
 

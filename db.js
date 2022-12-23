@@ -161,6 +161,20 @@ function deleteNoticeByid(id, callback) {
 }
 
 
+
+
+function insertJoin(userId, userName, userPw, userPwC, userMail, userNumber, callback) {
+  connection.query(`INSERT INTO userList(userId,create_time,userName,userPw,userPwC,userMail,userNumber)
+  VALUES ('${userId}',NOW(),'${userName}','${userPw}','${userPwC}','${userMail}','${userNumber}')`, err => {
+    if (err) throw err;
+    callback();
+  });
+}
+
+
+
+
+
 module.exports = {
   applyForm,
   insertForm,
@@ -176,7 +190,8 @@ module.exports = {
   insertNotice,
   getNoticeByid,
   updateNotice,
-  deleteNoticeByid
+  deleteNoticeByid,
+  insertJoin
 
 
 

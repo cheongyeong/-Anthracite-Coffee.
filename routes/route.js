@@ -287,21 +287,23 @@ router.get('/join', (req, res) => {
 
 router.post('/join', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
-  let name = param['my_name'];
-  let id = param['my_id'];
-  let pw = param['my_pw'];
-  let pw_check = param['my_pwCheck'];
-  let email = param['my_mail'];
-  let phone = param['my_number'];
-  // let adress = param['my_adress'];
-  console.log(name);
-  console.log(id);
-  console.log(pw);
-  console.log(pw_check);
-  console.log(email);
-  console.log(phone);
-  // console.log(adress);
+  let userId = param['userId'];
+  let userName = param['userName'];
+  let userPw = param['userPw'];
+  let userPwC = param['userPwC'];
+  let userMail = param['userMail'];
+  let userNumber = param['userNumber'];
+  db.insertJoin(userId, userName, userPw, userPwC, userMail, userNumber, () => {
+    res.redirect('login')
+  });
+
+
+
 });
+
+
+
+
 
 router.get('/login', (req, res) => {
   res.render('login');
