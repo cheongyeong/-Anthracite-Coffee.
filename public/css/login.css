@@ -32,7 +32,7 @@
   display: block;
   width: 160px;
   height: 40px;
-  background-image: url(../IMG/logo.png);
+  background-image: url(../img/logo.png);
   background-position: center center;
   background-size: cover;
   position: absolute;
@@ -41,13 +41,13 @@
   z-index: 2;
 }
 
-.loginPage_Img {
+.loginPage_img {
   width: 65%;
   box-sizing: border-box;
   position: relative;
 }
 
-.loginPage_Img img {
+.loginPage_img img {
   display: block;
   background-size: cover;
 }
@@ -202,7 +202,7 @@
   width: 130px;
   height: 30px;
   margin: 0 auto;
-  background-image: url(../IMG/logo_bk.png);
+  background-image: url(../img/logo_bk.png);
   background-position: center center;
   background-size: cover;
   margin-top: 100px;
@@ -236,7 +236,7 @@
 }
 
 @media (max-width: 1080px) {
-  .loginPage_Img {
+  .loginPage_img {
     display: none;
   }
 

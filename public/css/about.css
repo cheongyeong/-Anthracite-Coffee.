@@ -60,7 +60,7 @@ h6 {
 
 .about_img {
   width: 100%;
-  background-image: url(../IMG/about_img.jpg);
+  background-image: url(../img/about_img.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -70,7 +70,7 @@ h6 {
 
 .img-cont {
   width: 100%;
-  background-image: url(../IMG/about_img2.jpg);
+  background-image: url(../img/about_img2.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 45%;
@@ -102,18 +102,18 @@ h6 {
 }
 
 .seogyo {
-  background-image: url(../IMG/seogyo.jpg);
+  background-image: url(../img/seogyo.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .hannam {
-  background-image: url(../IMG/hannam.jpg);
+  background-image: url(../img/hannam.jpg);
   background-size: cover;
 }
 
 .jeju {
-  background-image: url(../IMG/jeju.jpg);
+  background-image: url(../img/jeju.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -142,7 +142,7 @@ h6 {
 }
 
 .img-cont_2 {
-  background-image: url(../IMG/about_seogyo.jpg);
+  background-image: url(../img/about_seogyo.jpg);
   background-size: cover;
   background-position: center center;
   width: 100%;

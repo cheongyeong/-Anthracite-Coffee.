@@ -44,7 +44,7 @@ header a {
   display: block;
   width: 18px;
   height: 18px;
-  background-image: url(../IMG/search.png);
+  background-image: url(../img/search.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -91,13 +91,13 @@ header a {
 .myPage>a {
   width: 17px;
   height: 17px;
-  background-image: url(../IMG/mypage.png)
+  background-image: url(../img/mypage.png)
 }
 
 .myBag>a {
   width: 19px;
   height: 19px;
-  background-image: url(../IMG/bag.png);
+  background-image: url(../img/bag.png);
   margin-left: 30px;
 }
 

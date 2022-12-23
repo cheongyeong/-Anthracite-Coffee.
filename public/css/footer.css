@@ -33,7 +33,7 @@ footer p {
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url(../IMG/f.png);
+  background-image: url(../img/f.png);
   background-size: cover;
   /* margin-right: 20px; */
 }
@@ -42,7 +42,7 @@ footer p {
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url(../IMG/ins.png);
+  background-image: url(../img/ins.png);
   background-size: cover;
 }
 
@@ -84,7 +84,7 @@ footer p {
 }
 
 .ft_logo {
-  background-image: url(../IMG/logo.png);
+  background-image: url(../img/logo.png);
   background-size: cover;
   width: 160px;
   height: 40px;
@@ -92,7 +92,7 @@ footer p {
 }
 
 .area {
-  background-image: url(../IMG/arae.png);
+  background-image: url(../img/arae.png);
   background-size: cover;
   width: 20px;
   height: 20px;

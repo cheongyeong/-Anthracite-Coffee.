@@ -8,7 +8,7 @@
 
 /* main 시작 */
 .mainImg {
-  background-image: url(../IMG/main.jpg);
+  background-image: url(../img/main.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
   display: block;
   width: 160px;
   height: 40px;
-  background-image: url(../IMG/logo.png);
+  background-image: url(../img/logo.png);
   background-position: center center;
   background-size: cover;
 }
@@ -65,7 +65,7 @@
   box-sizing: border-box;
   width: 190px;
   height: 385px;
-  background-image: url(../IMG/coffe.png);
+  background-image: url(../img/coffe.png);
   background-size: cover;
   background-position: center;
 }
@@ -206,16 +206,16 @@
 }
 
 .williamItem_1 .item_img {
-  background-image: url(../IMG/item11.jpg);
+  background-image: url(../img/item11.jpg);
 }
 
 .williamItem_2 .item_img {
-  background-image: url(../IMG/item8.jpg);
+  background-image: url(../img/item8.jpg);
   background-size: cover;
 }
 
 .williamItem_3 .item_img {
-  background-image: url(../IMG/item9.jpg);
+  background-image: url(../img/item9.jpg);
   background-size: cover;
 }
 

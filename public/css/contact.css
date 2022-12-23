@@ -12,7 +12,7 @@
 }
 
 .contact_img {
-  background-image: url(../IMG/contact_main.jpg);
+  background-image: url(../img/contact_main.jpg);
   width: 100%;
   background-size: cover;
   background-position: bottom;
@@ -82,7 +82,7 @@ h6 {
 
 .sampleRequest_img {
   width: 100%;
-  background-image: url(../IMG/list.jpg);
+  background-image: url(../img/list.jpg);
   background-size: cover;
   background-position: center;
   padding-bottom: 40%;
@@ -166,7 +166,7 @@ td {
 
 .board_lock {
   display: inline-block;
-  background-image: url(../IMG/lock.png);
+  background-image: url(../img/lock.png);
   background-position: center;
   width: 13px;
   height: 13px;
