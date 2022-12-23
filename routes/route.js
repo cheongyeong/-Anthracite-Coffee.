@@ -185,7 +185,6 @@ router.post('/editShop', upload.single('shopImg'), (req, res) => {
 
 router.get('/shop_detail', (req, res) => {
   let id = req.query.id;
-  console.log(id);
   db.getShopByid(id, (row) => {
     res.render('shop_detail', {
       row: row[0]
