@@ -41,7 +41,7 @@
   z-index: 2;
 }
 
-.loginPage_Img {
+.loginPage_wrap>.loginPage_Img {
   width: 65%;
   box-sizing: border-box;
   position: relative;
@@ -236,7 +236,7 @@
 }
 
 @media (max-width: 1080px) {
-  .loginPage_img {
+  .loginPage_wrap>.loginPage_Img {
     display: none;
   }
 

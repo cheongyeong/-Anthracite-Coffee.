@@ -13,6 +13,7 @@
 
 .notice-wrap {
   margin-bottom: 0;
+
   padding-bottom: 200px;
   box-sizing: border-box;
 }
@@ -148,4 +149,20 @@
 
 .list_body_title a {
   font-size: 16px;
+}
+
+
+
+@media(max-width:768px) {
+  .notice-wrap {
+    padding: 0 20px 200px;
+  }
+
+  .list_body_title a {
+    font-size: 14px;
+  }
+
+  .notice_page {
+    padding: 0 20px 100px;
+  }
 }

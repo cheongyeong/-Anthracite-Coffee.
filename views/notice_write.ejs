@@ -9,21 +9,23 @@
 </nav>
 
 
+<div class="notice_page">
 
-<div class="notice-contents">
-  <h1>공지사항 작성</h1>
-  <div class="contents">
-    <form method="post" action="/writeNotice" class="memo_form">
-      <div class="title-wrap">
-        <label> 제목 : </label>
-        <input type="text" name="noticeTitle" class="noticeTitle">
-      </div>
-      <div>
-        <textarea name="noticeContents" rows="20" cols="82"></textarea>
-      </div>
+  <div class="notice-contents">
+    <h1>공지사항 작성</h1>
+    <div class="contents">
+      <form method="post" action="/writeNotice" class="memo_form">
+        <div class="title-wrap">
+          <label> 제목 : </label>
+          <input type="text" name="noticeTitle" class="noticeTitle">
+        </div>
+        <div>
+          <textarea name="noticeContents" rows="20" cols="82"></textarea>
+        </div>
+    </div>
+    <div class="form_Buttons">
+      <input class="confirmBtn" type="submit" value="등록">
+    </div>
+    </form>
   </div>
-  <div class="form_Buttons">
-    <input class="confirmBtn" type="submit" value="등록">
-  </div>
-  </form>
 </div>
