@@ -61,6 +61,7 @@ h6 {
 .about_img {
   width: 100%;
   background-image: url(../img/about_img.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
