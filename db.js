@@ -3,7 +3,7 @@ var connection = mysql.createConnection({
   host: 'database-1.cq9sxzrqavcn.ap-northeast-2.rds.amazonaws.com',
   user: 'root',
   password: 'cjsrud1004-',
-  database: 'anthracite',
+  database: 'antracite',
   dateStrings: 'date',
   multipleStatements: true
 });
